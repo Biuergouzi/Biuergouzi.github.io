@@ -114,26 +114,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Linux用户与用户权限</title>
-    <url>/2021/06/10/Linux%E7%94%A8%E6%88%B7%E4%B8%8E%E7%94%A8%E6%88%B7%E6%9D%83%E9%99%90/</url>
-    <content><![CDATA[<h2 id="用户命令"><a href="#用户命令" class="headerlink" title="###用户命令"></a>###用户命令</h2><p>useradd [用户名] //创建用户，同时创建用户组<br>useradd -G [已存在的组] [用户名]  //创建一个用户并加入一个已存在的组<br>useradd [用户名] -s [命令目录]  //手动指定用户登录后使用的shell<br>useradd -M  //创建用户时 不创建用户目录<br>useradd -N  //创建用户时 不创建用户组<br>usermod -g [用户组] [用户名]  //修改用户所在的主要组<br>usermod -G [用户组] [用户名]  //修改用户所在的副要组<br>usermod -l [新用户名] [旧用户名] //修改用户名<br>usermod -L [用户名] //锁一个用户 使其不能使用login登录 但可以在root用户下使用su登录<br>usermod -e [用户名] //修改用户登录有效期<br>usermod -s [shell] //修改用户登录后使用的shell,usermod -s /sbin/nologin 此命令可使账户无法登录<br>usermod -u [uid] //修改用户uid<br>userdel [用户名] //删除一个用户，但不会删除用户目录<br>userdel -r [用户名] //删除用户所有东西，包括用户目录</p>
-<h2 id="用户组命令"><a href="#用户组命令" class="headerlink" title="###用户组命令"></a>###用户组命令</h2><p>groupadd [组名] 创建用户组<br>groupadd -g [组编号] [组名] //创建用户组同时指定编号<br>groupmod -n [新组名] [旧组名] //修改用户组的组名<br>groupmod -g [组编号] [组名] //修改用户组的组编号<br>groupdel [组名] //删除指定用户组</p>
-<h2 id="用户权限命令"><a href="#用户权限命令" class="headerlink" title="###用户权限命令"></a>###用户权限命令</h2><p>权限说明：<br>ls -al 查看当前目录所有文件/文件夹权限</p>
-<p>r=读;  r=4  //读权限使文件可被读，例cat、more命令<br>w=写; w=2 //写权限使文件/文件夹可被改写,例echo、mv、vi等命令<br>x=执行;x=1 //执行权限使文件可被执行或者文件夹进入，例cd命令</p>
-<p>权限：rwx rwx rwx<br>分为三组 一组为三个<br>第一组：用户权限  第一组英文字母为u<br>第二组：用户组权限 第二组英文字母为g<br>第三组：其他用户权限 第三组英文字母为o<br>英文字母a代表all 表示三组全选</p>
-<p>Chmod命令：<br>chmod 755 a //修改a文件的权限为755=rwx r-x r-x<br>chmod a+x a //修改a文件中的所有权限 加上执行权限<br>chmod -r //递归修改权限</p>
-<p>chown命令：<br>chown root: root a //修改a文件的用户权限以及用户组权限为root<br>chown root: zhangsan a //修改a文件的用户权限为root,用户组权限为zhangsan<br>chown : root a //只修改a文件的用户组为root<br>chown -r  //递归修改</p>
-<p>各个信息代表的含义图解：</p>
-<p><img src="/2021/06/10/Linux%E7%94%A8%E6%88%B7%E4%B8%8E%E7%94%A8%E6%88%B7%E6%9D%83%E9%99%90/image-20210619193139915.png" alt="image-20210619193139915"></p>
-]]></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
-      <tags>
-        <tag>基础</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Linux中VIM使用教程</title>
     <url>/2021/06/19/Linux%E4%B8%ADVIM%E4%BD%BF%E7%94%A8/</url>
     <content><![CDATA[<h1 id="Vim使用："><a href="#Vim使用：" class="headerlink" title="Vim使用："></a>Vim使用：</h1><p><img src="/2021/06/19/Linux%E4%B8%ADVIM%E4%BD%BF%E7%94%A8/image-20210619203205049.png" alt="image-20210619203205049"></p>
@@ -270,6 +250,26 @@
 <td>这是一个小数点，意思是重复前一个动作的意思</td>
 </tr>
 </tbody></table>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>基础</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Linux用户与用户权限</title>
+    <url>/2021/06/10/Linux%E7%94%A8%E6%88%B7%E4%B8%8E%E7%94%A8%E6%88%B7%E6%9D%83%E9%99%90/</url>
+    <content><![CDATA[<h2 id="用户命令"><a href="#用户命令" class="headerlink" title="###用户命令"></a>###用户命令</h2><p>useradd [用户名] //创建用户，同时创建用户组<br>useradd -G [已存在的组] [用户名]  //创建一个用户并加入一个已存在的组<br>useradd [用户名] -s [命令目录]  //手动指定用户登录后使用的shell<br>useradd -M  //创建用户时 不创建用户目录<br>useradd -N  //创建用户时 不创建用户组<br>usermod -g [用户组] [用户名]  //修改用户所在的主要组<br>usermod -G [用户组] [用户名]  //修改用户所在的副要组<br>usermod -l [新用户名] [旧用户名] //修改用户名<br>usermod -L [用户名] //锁一个用户 使其不能使用login登录 但可以在root用户下使用su登录<br>usermod -e [用户名] //修改用户登录有效期<br>usermod -s [shell] //修改用户登录后使用的shell,usermod -s /sbin/nologin 此命令可使账户无法登录<br>usermod -u [uid] //修改用户uid<br>userdel [用户名] //删除一个用户，但不会删除用户目录<br>userdel -r [用户名] //删除用户所有东西，包括用户目录</p>
+<h2 id="用户组命令"><a href="#用户组命令" class="headerlink" title="###用户组命令"></a>###用户组命令</h2><p>groupadd [组名] 创建用户组<br>groupadd -g [组编号] [组名] //创建用户组同时指定编号<br>groupmod -n [新组名] [旧组名] //修改用户组的组名<br>groupmod -g [组编号] [组名] //修改用户组的组编号<br>groupdel [组名] //删除指定用户组</p>
+<h2 id="用户权限命令"><a href="#用户权限命令" class="headerlink" title="###用户权限命令"></a>###用户权限命令</h2><p>权限说明：<br>ls -al 查看当前目录所有文件/文件夹权限</p>
+<p>r=读;  r=4  //读权限使文件可被读，例cat、more命令<br>w=写; w=2 //写权限使文件/文件夹可被改写,例echo、mv、vi等命令<br>x=执行;x=1 //执行权限使文件可被执行或者文件夹进入，例cd命令</p>
+<p>权限：rwx rwx rwx<br>分为三组 一组为三个<br>第一组：用户权限  第一组英文字母为u<br>第二组：用户组权限 第二组英文字母为g<br>第三组：其他用户权限 第三组英文字母为o<br>英文字母a代表all 表示三组全选</p>
+<p>Chmod命令：<br>chmod 755 a //修改a文件的权限为755=rwx r-x r-x<br>chmod a+x a //修改a文件中的所有权限 加上执行权限<br>chmod -r //递归修改权限</p>
+<p>chown命令：<br>chown root: root a //修改a文件的用户权限以及用户组权限为root<br>chown root: zhangsan a //修改a文件的用户权限为root,用户组权限为zhangsan<br>chown : root a //只修改a文件的用户组为root<br>chown -r  //递归修改</p>
+<p>各个信息代表的含义图解：</p>
+<p><img src="/2021/06/10/Linux%E7%94%A8%E6%88%B7%E4%B8%8E%E7%94%A8%E6%88%B7%E6%9D%83%E9%99%90/image-20210619193139915.png" alt="image-20210619193139915"></p>
 ]]></content>
       <categories>
         <category>Linux</category>
