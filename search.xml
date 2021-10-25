@@ -114,47 +114,6 @@
       </tags>
   </entry>
   <entry>
-    <title>hexo文章本地图片插件</title>
-    <url>/2021/06/19/hexo%E6%96%87%E7%AB%A0%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87%E6%8F%92%E4%BB%B6/</url>
-    <content><![CDATA[<h2 id="一、安装插件与修改配置文件"><a href="#一、安装插件与修改配置文件" class="headerlink" title="一、安装插件与修改配置文件"></a>一、安装插件与修改配置文件</h2><hr>
-<p>npm install <a href="https://github.com/7ym0n/hexo-asset-image">https://github.com/7ym0n/hexo-asset-image</a> –sa &nbsp;&nbsp;//修改过的插件，原本的插件有Buf，这个已经经过修改 安装后就无需修改了。</p>
-<hr>
-<p>打开hexo博客根目录的配置文件’_config.yml’ 修改为以下内容</p>
-<hr>
-<p>post_asset_folder: false ==&gt; true</p>
-<hr>
-<h2 id="二、创建文章"><a href="#二、创建文章" class="headerlink" title="二、创建文章"></a>二、创建文章</h2><p>进入hexo博客文章目录中，在当前目录打开终端/cmd</p>
-<blockquote>
-<p>hexo new “文章名” &nbsp;&nbsp; //创建一个文章</p>
-</blockquote>
-<p><img src="/2021/06/19/hexo%E6%96%87%E7%AB%A0%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87%E6%8F%92%E4%BB%B6/image-20210619214015237.png" alt="image-20210619214015237"></p>
-<p>创建完成后，会在文章目录中创建一个与文章名相同的文件夹</p>
-<p><img src="/2021/06/19/hexo%E6%96%87%E7%AB%A0%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87%E6%8F%92%E4%BB%B6/image-20210619214210166.png" alt="image-20210619214210166"></p>
-<p>这个文件夹就是用来放图片的文件夹</p>
-<h2 id="三、修改Typora偏好设置"><a href="#三、修改Typora偏好设置" class="headerlink" title="三、修改Typora偏好设置"></a>三、修改Typora偏好设置</h2><p>打开Typora，点击左上角文件—点击偏好设置</p>
-<p><img src="/2021/06/19/hexo%E6%96%87%E7%AB%A0%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87%E6%8F%92%E4%BB%B6/image-20210619214330935.png" alt="image-20210619214330935"></p>
-<p>在偏好设置中点击–图像</p>
-<p><img src="/2021/06/19/hexo%E6%96%87%E7%AB%A0%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87%E6%8F%92%E4%BB%B6/Users\Biu二狗子\AppData\Roaming\Typora\typora-user-images\image-20210619214455678.png" alt="image-20210619214455678"></p>
-<p>将无特殊操作修改为复制到指定路径，然后将【对本地位置的图片应用上述规则】以及【优先使用相对路径勾上】</p>
-<p><img src="/2021/06/19/hexo%E6%96%87%E7%AB%A0%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87%E6%8F%92%E4%BB%B6/image-20210619214700657.png" alt="image-20210619214700657"></p>
-<h2 id="四、插入图片-截图"><a href="#四、插入图片-截图" class="headerlink" title="四、插入图片/截图"></a>四、插入图片/截图</h2><p>将图片放入文件夹中，在文章内容中输入</p>
-<hr>
-<p><img src alt="描述文字"></p>
-<p><img src="/2021/06/19/hexo%E6%96%87%E7%AB%A0%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87%E6%8F%92%E4%BB%B6/image-20210619215455695.png" alt="image-20210619215455695"></p>
-<hr>
-<p>第二种放入截图的方式就十分简单了</p>
-<p>使用截图工具 QQ或者微信的都可以，截图后直接复制到文章内，会自动添加图片到文件夹中</p>
-<p><img src="/2021/06/19/hexo%E6%96%87%E7%AB%A0%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87%E6%8F%92%E4%BB%B6/image-20210619215619487.png" alt="image-20210619215619487"></p>
-<p>这样就可以正常使用了~</p>
-]]></content>
-      <categories>
-        <category>Hexo博客</category>
-      </categories>
-      <tags>
-        <tag>基础</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Linux中VIM使用教程</title>
     <url>/2021/06/19/Linux%E4%B8%ADVIM%E4%BD%BF%E7%94%A8/</url>
     <content><![CDATA[<h1 id="Vim使用："><a href="#Vim使用：" class="headerlink" title="Vim使用："></a>Vim使用：</h1><p><img src="/2021/06/19/Linux%E4%B8%ADVIM%E4%BD%BF%E7%94%A8/image-20210619203205049.png" alt="image-20210619203205049"></p>
@@ -314,6 +273,47 @@
 ]]></content>
       <categories>
         <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>基础</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo文章本地图片插件</title>
+    <url>/2021/06/19/hexo%E6%96%87%E7%AB%A0%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87%E6%8F%92%E4%BB%B6/</url>
+    <content><![CDATA[<h2 id="一、安装插件与修改配置文件"><a href="#一、安装插件与修改配置文件" class="headerlink" title="一、安装插件与修改配置文件"></a>一、安装插件与修改配置文件</h2><hr>
+<p>npm install <a href="https://github.com/7ym0n/hexo-asset-image">https://github.com/7ym0n/hexo-asset-image</a> –sa &nbsp;&nbsp;//修改过的插件，原本的插件有Buf，这个已经经过修改 安装后就无需修改了。</p>
+<hr>
+<p>打开hexo博客根目录的配置文件’_config.yml’ 修改为以下内容</p>
+<hr>
+<p>post_asset_folder: false ==&gt; true</p>
+<hr>
+<h2 id="二、创建文章"><a href="#二、创建文章" class="headerlink" title="二、创建文章"></a>二、创建文章</h2><p>进入hexo博客文章目录中，在当前目录打开终端/cmd</p>
+<blockquote>
+<p>hexo new “文章名” &nbsp;&nbsp; //创建一个文章</p>
+</blockquote>
+<p><img src="/2021/06/19/hexo%E6%96%87%E7%AB%A0%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87%E6%8F%92%E4%BB%B6/image-20210619214015237.png" alt="image-20210619214015237"></p>
+<p>创建完成后，会在文章目录中创建一个与文章名相同的文件夹</p>
+<p><img src="/2021/06/19/hexo%E6%96%87%E7%AB%A0%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87%E6%8F%92%E4%BB%B6/image-20210619214210166.png" alt="image-20210619214210166"></p>
+<p>这个文件夹就是用来放图片的文件夹</p>
+<h2 id="三、修改Typora偏好设置"><a href="#三、修改Typora偏好设置" class="headerlink" title="三、修改Typora偏好设置"></a>三、修改Typora偏好设置</h2><p>打开Typora，点击左上角文件—点击偏好设置</p>
+<p><img src="/2021/06/19/hexo%E6%96%87%E7%AB%A0%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87%E6%8F%92%E4%BB%B6/image-20210619214330935.png" alt="image-20210619214330935"></p>
+<p>在偏好设置中点击–图像</p>
+<p><img src="/2021/06/19/hexo%E6%96%87%E7%AB%A0%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87%E6%8F%92%E4%BB%B6/Users\Biu二狗子\AppData\Roaming\Typora\typora-user-images\image-20210619214455678.png" alt="image-20210619214455678"></p>
+<p>将无特殊操作修改为复制到指定路径，然后将【对本地位置的图片应用上述规则】以及【优先使用相对路径勾上】</p>
+<p><img src="/2021/06/19/hexo%E6%96%87%E7%AB%A0%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87%E6%8F%92%E4%BB%B6/image-20210619214700657.png" alt="image-20210619214700657"></p>
+<h2 id="四、插入图片-截图"><a href="#四、插入图片-截图" class="headerlink" title="四、插入图片/截图"></a>四、插入图片/截图</h2><p>将图片放入文件夹中，在文章内容中输入</p>
+<hr>
+<p><img src alt="描述文字"></p>
+<p><img src="/2021/06/19/hexo%E6%96%87%E7%AB%A0%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87%E6%8F%92%E4%BB%B6/image-20210619215455695.png" alt="image-20210619215455695"></p>
+<hr>
+<p>第二种放入截图的方式就十分简单了</p>
+<p>使用截图工具 QQ或者微信的都可以，截图后直接复制到文章内，会自动添加图片到文件夹中</p>
+<p><img src="/2021/06/19/hexo%E6%96%87%E7%AB%A0%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87%E6%8F%92%E4%BB%B6/image-20210619215619487.png" alt="image-20210619215619487"></p>
+<p>这样就可以正常使用了~</p>
+]]></content>
+      <categories>
+        <category>Hexo博客</category>
       </categories>
       <tags>
         <tag>基础</tag>
