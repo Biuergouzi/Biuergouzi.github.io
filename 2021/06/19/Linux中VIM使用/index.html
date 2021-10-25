@@ -1,78 +1,198 @@
 
+
+
+
 <!DOCTYPE html>
-<html lang="zh-Hans" class="loading">
+<html lang="zh-Hans">
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Linux中VIM使用教程 - Biuergouzi</title>
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="google" content="notranslate" />
-    <meta name="keywords" content="Biu二狗子,Biuergouzi,"> 
-    <meta name="description" content="Vim使用：
-vim 三种编辑模式：
-Vi/VIM编辑模式：1.命令模式(COmmand mode):“i” 切换到输入模式，然后输入字符“x” 删除当前光标所在处的字符“:　“进入命令模式。已在最,"> 
-    <meta name="author" content="John Doe"> 
-    <link rel="alternative" href="atom.xml" title="Biuergouzi" type="application/atom+xml"> 
-    <link rel="icon" href="/img/favicon.png"> 
-    
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
 
-    
-<link rel="stylesheet" href="/css/diaspora.css">
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
 
+
+<link rel="alternate" type="application/rss+xml" title="Biuergouzi" href="http://example.com/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="Biuergouzi" href="http://example.com/atom.xml" />
+<link rel="alternate" type="application/json" title="Biuergouzi" href="http://example.com/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.0.0">
+
+  
+  <meta name="keywords" content="基础" />
+
+
+<link rel="canonical" href="http://example.com/2021/06/19/Linux%E4%B8%ADVIM%E4%BD%BF%E7%94%A8/">
+
+
+
+  <title>
+Linux中VIM使用教程 - Linux |
+Biu二狗子 = Biuergouzi</title>
 <meta name="generator" content="Hexo 5.4.0"></head>
-
-<head>
- <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
- <script src="/live2d-widget/autoload.js"></script>
-</head>
-<body class="loading">
-    <span id="config-title" style="display:none">Biuergouzi</span>
-    <div id="loader"></div>
-    <div id="single">
-    <div id="top" style="display: block;">
-    <div class="bar" style="width: 0;"></div>
-    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="http://example.com"></a>
-    <div title="播放/暂停" class="iconfont icon-play"></div>
-    <h3 class="subtitle">Linux中VIM使用教程</h3>
-    <div class="social">
-        <div>
-            <div class="share">
-                <a title="获取二维码" class="iconfont icon-scan" href="javascript:;"></a>
-            </div>
-            <div id="qr"></div>
-        </div>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
     </div>
-    <div class="scrollbar"></div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">Linux中VIM使用教程
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2021-06-19 00:00:00">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2021-06-19T00:00:00+08:00">2021-06-19</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">本文字数</span>
+    <span>1.1k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">阅读时长</span>
+    <span>1 分钟</span>
+  </span>
 </div>
 
-    <div class="section">
-        <div class="article">
-    <div class='main'>
-        <h1 class="title">Linux中VIM使用教程</h1>
-        <div class="stuff">
-            <span>六月 19, 2021</span>
-            
-  <ul class="post-tags-list" itemprop="keywords"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/%E5%9F%BA%E7%A1%80/" rel="tag">基础</a></li></ul>
 
-
+          </div>
         </div>
-        <div class="content markdown">
-            <h1 id="Vim使用："><a href="#Vim使用：" class="headerlink" title="Vim使用："></a>Vim使用：</h1><p><img src="/2021/06/19/Linux%E4%B8%ADVIM%E4%BD%BF%E7%94%A8/image-20210619203205049.png" alt="image-20210619203205049"></p>
-<h3 id="vim-三种编辑模式："><a href="#vim-三种编辑模式：" class="headerlink" title="vim 三种编辑模式："></a>vim 三种编辑模式：</h3><hr>
-<p>Vi/VIM编辑模式：<br>1.命令模式(COmmand mode):<br>“i” 切换到输入模式，然后输入字符<br>“x” 删除当前光标所在处的字符<br>“:　“进入命令模式。已在最后一行输入命令</p>
-<p>2.输入模式(Insert mode)<br>3.底线命令模式(Last linemode)</p>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">Biu二狗子</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipew8gmvyj20zk0m87wh.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclxp31goj20zk0m8qv5.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclgrvbd6j20zk0m8qv5.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicivghyooj20zk0m8dir.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipexw3o58j20zk0m8e81.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipexe4oykj20zk0m87ji.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/Linux/" itemprop="item" rel="index" title="分类于 Linux"><span itemprop="name">Linux</span></a>
+<meta itemprop="position" content="1" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-Hans">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2021/06/19/Linux%E4%B8%ADVIM%E4%BD%BF%E7%94%A8/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="John Doe">
+    <meta itemprop="description" content=", ">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Biuergouzi">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h1 id="vim使用"><a class="markdownIt-Anchor" href="#vim使用">#</a> Vim 使用：</h1>
+<p><img data-src="Linux%E4%B8%ADVIM%E4%BD%BF%E7%94%A8/image-20210619203205049.png" alt="image-20210619203205049"></p>
+<h3 id="vim-三种编辑模式"><a class="markdownIt-Anchor" href="#vim-三种编辑模式">#</a> vim 三种编辑模式：</h3>
+<hr>
+<p>Vi/VIM 编辑模式：<br>
+1. 命令模式 (COmmand mode):<br>
+“i” 切换到输入模式，然后输入字符<br>
+ “x” 删除当前光标所在处的字符<br>
+ &quot;:　&quot; 进入命令模式。已在最后一行输入命令</p>
+<p>2. 输入模式 (Insert mode)<br>
+ 3. 底线命令模式 (Last linemode)</p>
 <hr>
 <blockquote>
-<p>vi/vim 文件名.txt     &amp;nbsp //编辑当前目录该文件名的文件内容，若该目录无此名文件 则会创建一个文件</p>
+<p>vi/vim 文件名.txt     &amp;nbsp // 编辑当前目录该文件名的文件内容，若该目录无此名文件 则会创建一个文件</p>
 </blockquote>
-<p>进入Vim编辑器后，按”i”,”a”,”o”可进入到输入模式，在编辑模式中，左下角会显示–INSERT–字样，如果需要退出的话，按键盘的”ESC”键退出编辑模式 返回到一般模式。按”:”建 在输入wq即可保存并退出编辑。</p>
+<p>进入 Vim 编辑器后，按 &quot;i&quot;,“a”,“o&quot;可进入到输入模式，在编辑模式中，左下角会显示–INSERT–字样，如果需要退出的话，按键盘的&quot;ESC&quot;键退出编辑模式 返回到一般模式。按”:&quot; 建 在输入 wq 即可保存并退出编辑。</p>
 <hr>
-<h3 id="vim的保存退出以及强制保存退出"><a href="#vim的保存退出以及强制保存退出" class="headerlink" title="vim的保存退出以及强制保存退出:"></a>vim的保存退出以及强制保存退出:</h3><blockquote>
-<p>:wq    //保存并退出<br>:q        &amp;nbsp//退出（不会保存）<br>:w        &amp;nbsp//保存<br>:q!    &amp;nbsp //强制退出<br>:w！    &amp;nbsp//强制保存<br>:wq!     &amp;nbsp //强制保存并退出</p>
+<h3 id="vim的保存退出以及强制保存退出"><a class="markdownIt-Anchor" href="#vim的保存退出以及强制保存退出">#</a> vim 的保存退出以及强制保存退出:</h3>
+<blockquote>
+<p>:wq	// 保存并退出<br>
+:q		&amp;nbsp// 退出（不会保存）<br>
+:w		&amp;nbsp// 保存<br>
+:q!	&amp;nbsp // 强制退出<br>
+:w！	&amp;nbsp// 强制保存<br>
+:wq! 	&amp;nbsp // 强制保存并退出</p>
 </blockquote>
 <hr>
 <table>
@@ -82,17 +202,18 @@ Vi/VIM编辑模式：1.命令模式(COmmand mode):“i” 切换到输入模式�
 <th>作用</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>[Ctrl]+[f]</td>
-<td>屏幕[向下]移动一页</td>
+<td>屏幕 [向下] 移动一页</td>
 </tr>
 <tr>
 <td>[Ctrl]+[b]</td>
-<td>屏幕[向上]移动一页</td>
+<td>屏幕 [向上] 移动一页</td>
 </tr>
 <tr>
 <td>0 / [Home]</td>
-<td>这是数字[0]，移动到这一行的最前面字符处</td>
+<td>这是数字 [0]，移动到这一行的最前面字符处</td>
 </tr>
 <tr>
 <td>$ / [End]</td>
@@ -108,9 +229,10 @@ Vi/VIM编辑模式：1.命令模式(COmmand mode):“i” 切换到输入模式�
 </tr>
 <tr>
 <td>n<Enter></Enter></td>
-<td>n为数字，光标向下移动n行</td>
+<td>n 为数字，光标向下移动 n 行</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
 <table>
 <thead>
 <tr>
@@ -118,35 +240,37 @@ Vi/VIM编辑模式：1.命令模式(COmmand mode):“i” 切换到输入模式�
 <th>作用</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>/word</td>
-<td>向光标往下寻找一个名为word的字符串</td>
+<td>向光标往下寻找一个名为 word 的字符串</td>
 </tr>
 <tr>
 <td>?word</td>
-<td>向光标往上寻找一个名为word的字符串</td>
+<td>向光标往上寻找一个名为 word 的字符串</td>
 </tr>
 <tr>
 <td>n</td>
-<td>这个n是英文按键，代表重复前一个搜寻动作</td>
+<td>这个 n 是英文按键，代表重复前一个搜寻动作</td>
 </tr>
 <tr>
 <td>N</td>
-<td>这个N是个英文按键，与n相反，为[反向]进行前的一个搜寻动作</td>
+<td>这个 N 是个英文按键，与 n 相反，为 [反向] 进行前的一个搜寻动作</td>
 </tr>
 <tr>
 <td>:n1,n2s/word1/word2/g</td>
-<td>n1与n2为数字。在第n1与n2之间寻找word1这个字符串，并将该字符串取代为word2</td>
+<td>n1 与 n2 为数字。在第 n1 与 n2 之间寻找 word1 这个字符串，并将该字符串取代为 word2</td>
 </tr>
 <tr>
-<td>:1,$s/word1/word2/g或者:%s/word1/word2/g</td>
-<td>从第一行到最后一行寻找word1字符串，并将字符串代替为word2</td>
+<td>:1,$s/word1/word2/g 或者:% s/word1/word2/g</td>
+<td>从第一行到最后一行寻找 word1 字符串，并将字符串代替为 word2</td>
 </tr>
 <tr>
-<td>:1,$s/word1/word2/gc或者:%s/word1/word2/gc</td>
-<td>从第一行到最后一行寻找word1字符串，并将字符串代替为word2</td>
+<td>:1,$s/word1/word2/gc 或者:% s/word1/word2/gc</td>
+<td>从第一行到最后一行寻找 word1 字符串，并将字符串代替为 word2</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
 <table>
 <thead>
 <tr>
@@ -154,9 +278,10 @@ Vi/VIM编辑模式：1.命令模式(COmmand mode):“i” 切换到输入模式�
 <th>作用</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>x,X</td>
-<td>在一行字当中,x为向后剪切一个字符，X为向前剪切一个字符</td>
+<td>在一行字当中，x 为向后剪切一个字符，X 为向前剪切一个字符</td>
 </tr>
 <tr>
 <td>dd</td>
@@ -164,7 +289,7 @@ Vi/VIM编辑模式：1.命令模式(COmmand mode):“i” 切换到输入模式�
 </tr>
 <tr>
 <td>ndd</td>
-<td>n为数字。删除光标所在的向下n行。</td>
+<td>n 为数字。删除光标所在的向下 n 行。</td>
 </tr>
 <tr>
 <td>yy</td>
@@ -172,11 +297,11 @@ Vi/VIM编辑模式：1.命令模式(COmmand mode):“i” 切换到输入模式�
 </tr>
 <tr>
 <td>nyy</td>
-<td>n为数字，复制光标所在的向下n行</td>
+<td>n 为数字，复制光标所在的向下 n 行</td>
 </tr>
 <tr>
 <td>p,p</td>
-<td>p为将已复制的数据在光标下一行贴上，P则为贴在光标上一行</td>
+<td>p 为将已复制的数据在光标下一行贴上，P 则为贴在光标上一行</td>
 </tr>
 <tr>
 <td>v</td>
@@ -194,116 +319,380 @@ Vi/VIM编辑模式：1.命令模式(COmmand mode):“i” 切换到输入模式�
 <td>.</td>
 <td>这是一个小数点，意思是重复前一个动作的意思</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
 
-            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
-            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
-                <source type="audio/mpeg" src="">
-            </audio>
-            
-                <ul id="audio-list" style="display:none">
-                    
-                        
-                            <li title='0' data-url='http://link.hhtjim.com/163/425570952.mp3'></li>
-                        
-                    
-                        
-                            <li title='1' data-url='http://link.hhtjim.com/163/425570952.mp3'></li>
-                        
-                    
-                </ul>
-            
-        </div>
-        
-    <div id='gitalk-container' class="comment link"
-		data-enable='true'
-        data-ae='true'
-        data-ci='c8c3875ab87d4117ae73'
-        data-cs='a7b363eaa6f5d6972c59c58193d5a30a655be096'
-        data-r='ergouzi'
-        data-o='Biuergouzi'
-        data-a='Biuergouzi'
-        data-d='false'
-    >查看评论</div>
+      <div class="tags">
+          <a href="/tags/%E5%9F%BA%E7%A1%80/" rel="tag"><i class="ic i-tag"></i> 基础</a>
+      </div>
+  </div>
 
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2021-06-19 21:18:10" itemprop="dateModified" datetime="2021-06-19T21:18:10+08:00">2021-06-19</time>
+  </span>
+  <span id="2021/06/19/Linux中VIM使用/" class="item leancloud_visitors" data-flag-title="Linux中VIM使用教程" title="阅读次数">
+      <span class="icon">
+        <i class="ic i-eye"></i>
+      </span>
+      <span class="text">阅读次数</span>
+      <span class="leancloud-visitors-count"></span>
+      <span class="text">次</span>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 赞赏</button>
+  <p>请我喝[茶]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="John Doe 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="John Doe 支付宝">
+        <p>支付宝</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/paypal.png" alt="John Doe 贝宝">
+        <p>贝宝</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>John Doe <i class="ic i-at"><em>@</em></i>Biuergouzi
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="http://example.com/2021/06/19/Linux%E4%B8%ADVIM%E4%BD%BF%E7%94%A8/" title="Linux中VIM使用教程">http://example.com/2021/06/19/Linux中VIM使用/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2021/06/16/html%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gicit31ffoj20zk0m8naf.jpg" title="HTML学习总结">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> HTML基础</span>
+  <h3>HTML学习总结</h3>
+  </a>
 
     </div>
+    <div class="item right">
+      
+
+  <a href="/2021/06/19/hexo%E6%96%87%E7%AB%A0%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87%E6%8F%92%E4%BB%B6/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclip4jbpj20zk0m87cv.jpg" title="hexo文章本地图片插件">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> Hexo博客</span>
+  <h3>hexo文章本地图片插件</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#vim%E4%BD%BF%E7%94%A8"><span class="toc-number">1.</span> <span class="toc-text"> Vim 使用：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#vim-%E4%B8%89%E7%A7%8D%E7%BC%96%E8%BE%91%E6%A8%A1%E5%BC%8F"><span class="toc-number">1.0.1.</span> <span class="toc-text"> vim 三种编辑模式：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vim%E7%9A%84%E4%BF%9D%E5%AD%98%E9%80%80%E5%87%BA%E4%BB%A5%E5%8F%8A%E5%BC%BA%E5%88%B6%E4%BF%9D%E5%AD%98%E9%80%80%E5%87%BA"><span class="toc-number">1.0.2.</span> <span class="toc-text"> vim 的保存退出以及强制保存退出:</span></a></li></ol></li></ol></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li><a href="/2021/06/10/Linux%E7%94%A8%E6%88%B7%E4%B8%8E%E7%94%A8%E6%88%B7%E6%9D%83%E9%99%90/" rel="bookmark" title="Linux用户与用户权限">Linux用户与用户权限</a></li><li><a href="/2021/06/10/linux%E5%91%BD%E4%BB%A4/" rel="bookmark" title="Linux命令">Linux命令</a></li><li class="active"><a href="/2021/06/19/Linux%E4%B8%ADVIM%E4%BD%BF%E7%94%A8/" rel="bookmark" title="Linux中VIM使用教程">Linux中VIM使用教程</a></li><li><a href="/2021/10/21/vulhub-doubletrouble/" rel="bookmark" title="Vulhub靶场(双重麻烦)">Vulhub靶场(双重麻烦)</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="John Doe"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">John Doe</p>
+  <div class="description" itemprop="description"></div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">8</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">4</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">2</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL0JpdWVyZ291emk=" title="https:&#x2F;&#x2F;github.com&#x2F;Biuergouzi"><i class="ic i-github"></i></span>
+      <span class="exturl item music" data-url="aHR0cDovL211c2ljLjE2My5jb20vbS91c2VyL2hvbWU/aWQ9MjU0MTQ3Njgx" title="http:&#x2F;&#x2F;music.163.com&#x2F;m&#x2F;user&#x2F;home?id&#x3D;254147681"><i class="ic i-cloud-music"></i></span>
+      <span class="exturl item email" data-url="bWFpbHRvOjkzMTQ0Mzk5MEBxcS5jb20=" title="mailto:931443990@qq.com"><i class="ic i-envelope"></i></span>
+</div>
+
+<ul class="menu">
+  
     
-</div>
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+    
+  <li class="item">
+    <a href="/friends/" rel="section"><i class="ic i-heart"></i>friends</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/links/" rel="section"><i class="ic i-magic"></i>links</a>
+  </li>
 
 
+</ul>
+
+      </div>
     </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/2021/06/16/html%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/2021/06/19/hexo%E6%96%87%E7%AB%A0%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87%E6%8F%92%E4%BB%B6/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
 </div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Hexo%E5%8D%9A%E5%AE%A2/" title="分类于 Hexo博客">Hexo博客</a>
+</div>
+
+    <span><a href="/2021/06/19/hexo%E6%96%87%E7%AB%A0%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87%E6%8F%92%E4%BB%B6/" title="hexo文章本地图片插件">hexo文章本地图片插件</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/HTML%E5%9F%BA%E7%A1%80/" title="分类于 HTML基础">HTML基础</a>
+</div>
+
+    <span><a href="/2021/06/16/html%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="HTML学习总结">HTML学习总结</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Windows/" title="分类于 Windows">Windows</a>
+</div>
+
+    <span><a href="/2021/06/10/IdeaCMS%E7%BD%91%E7%AB%99%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/" title="Windows server 2008虚拟机中IdeaCMS网站安装教程">Windows server 2008虚拟机中IdeaCMS网站安装教程</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Linux/" title="分类于 Linux">Linux</a>
+</div>
+
+    <span><a href="/2021/10/21/vulhub-doubletrouble/" title="Vulhub靶场(双重麻烦)">Vulhub靶场(双重麻烦)</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Hexo%E5%8D%9A%E5%AE%A2/" title="分类于 Hexo博客">Hexo博客</a>
+</div>
+
+    <span><a href="/2021/06/10/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E4%B8%8E%E4%B8%8A%E4%BC%A0%E5%88%B0github%E6%95%99%E7%A8%8B/" title="Hexo博客搭建">Hexo博客搭建</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Linux/" title="分类于 Linux">Linux</a>
+</div>
+
+    <span><a href="/2021/06/10/linux%E5%91%BD%E4%BB%A4/" title="Linux命令">Linux命令</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Linux/" title="分类于 Linux">Linux</a>
+</div>
+
+    <span><a href="/2021/06/10/Linux%E7%94%A8%E6%88%B7%E4%B8%8E%E7%94%A8%E6%88%B7%E6%9D%83%E9%99%90/" title="Linux用户与用户权限">Linux用户与用户权限</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Linux/" title="分类于 Linux">Linux</a>
+</div>
+
+    <span><a href="/2021/06/19/Linux%E4%B8%ADVIM%E4%BD%BF%E7%94%A8/" title="Linux中VIM使用教程">Linux中VIM使用教程</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 
+    <span itemprop="copyrightYear">2021</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">John Doe @ Biu二狗子</span>
+  </div>
+  <div class="count">
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="站点总字数">15k 字</span>
+
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="站点阅读时长">14 分钟</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2021/06/19/Linux中VIM使用/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)大変だ！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.0.0"></script>
+
+
+
+
 </body>
-
-<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-
-
-<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
-<script src="/js/plugin.js"></script>
-<script src="/js/typed.js"></script>
-<script src="/js/diaspora.js"></script>
-
-
-<link rel="stylesheet" href="/photoswipe/photoswipe.css">
-<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
-
-
-<script src="/photoswipe/photoswipe.min.js"></script>
-<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
-
-
-<!-- Root element of PhotoSwipe. Must have class pswp. -->
-<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-    <!-- Background of PhotoSwipe. 
-         It's a separate element as animating opacity is faster than rgba(). -->
-    <div class="pswp__bg"></div>
-    <!-- Slides wrapper with overflow:hidden. -->
-    <div class="pswp__scroll-wrap">
-        <!-- Container that holds slides. 
-            PhotoSwipe keeps only 3 of them in the DOM to save memory.
-            Don't modify these 3 pswp__item elements, data is added later on. -->
-        <div class="pswp__container">
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-        </div>
-        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
-        <div class="pswp__ui pswp__ui--hidden">
-            <div class="pswp__top-bar">
-                <!--  Controls are self-explanatory. Order can be changed. -->
-                <div class="pswp__counter"></div>
-                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-                <button class="pswp__button pswp__button--share" title="Share"></button>
-                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
-                <!-- element will get class pswp__preloader--active when preloader is running -->
-                <div class="pswp__preloader">
-                    <div class="pswp__preloader__icn">
-                      <div class="pswp__preloader__cut">
-                        <div class="pswp__preloader__donut"></div>
-                      </div>
-                    </div>
-                </div>
-            </div>
-            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                <div class="pswp__share-tooltip"></div> 
-            </div>
-            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-            </button>
-            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-            </button>
-            <div class="pswp__caption">
-                <div class="pswp__caption__center"></div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
-
-
-
 </html>
