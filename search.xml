@@ -83,57 +83,57 @@ branch: master</p>
   <entry>
     <title>Windows server 2008虚拟机中IdeaCMS网站安装教程</title>
     <url>/IdeaCMS%E7%BD%91%E7%AB%99%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</url>
-    <content><![CDATA[<h1 id="ideacms网站安装教程"><a class="markdownIt-Anchor" href="#ideacms网站安装教程">#</a> IdeaCMS 网站安装教程：</h1>
-<p>&lt;!- 以下步骤皆为在虚拟机中操作–！&gt; 此教程为已在 windows server 中安装 iis 服务</p>
-<h2 id="第一步下载ideacms源码包-导入至windows-server-2008中"><a class="markdownIt-Anchor" href="#第一步下载ideacms源码包-导入至windows-server-2008中">#</a> 第一步：下载 ideaCMS 源码包 导入至 Windows server 2008 中</h2>
-<p><img data-src="IdeaCMS%E7%BD%91%E7%AB%99%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/image-20210619191414428.png" alt="image-20210619191414428"></p>
-<h2 id="第二步解压至c盘目录ideacms文件夹中"><a class="markdownIt-Anchor" href="#第二步解压至c盘目录ideacms文件夹中">#</a> 第二步解压至 C 盘目录 ideaCMS 文件夹中</h2>
-<p><img data-src="IdeaCMS%E7%BD%91%E7%AB%99%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/image-20210619192627036.png" alt="image-20210619192627036"></p>
-<h2 id="第三步打开服务器管理器"><a class="markdownIt-Anchor" href="#第三步打开服务器管理器">#</a> 第三步：打开服务器管理器</h2>
-<p><img data-src="IdeaCMS%E7%BD%91%E7%AB%99%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/image-20210619192632075.png" alt="image-20210619192632075"></p>
-<h2 id="第四步建立网站"><a class="markdownIt-Anchor" href="#第四步建立网站">#</a> 第四步：建立网站</h2>
-<p>右击网站 — 点击添加网站 — 网站名称随意 — 路径选择之前解压的文件夹</p>
-<p><img data-src="IdeaCMS%E7%BD%91%E7%AB%99%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/image-20210619192637473.png" alt="image-20210619192637473"></p>
-<p><img data-src="IdeaCMS%E7%BD%91%E7%AB%99%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/image-20210619192644524.png" alt="image-20210619192644524"></p>
+    <content><![CDATA[<h1 id="ideacms网站安装教程"><a class="anchor" href="#ideacms网站安装教程">#</a> IdeaCMS 网站安装教程：</h1>
+<p>&lt;!- 以下步骤皆为在虚拟机中操作 --！&gt; 此教程为已在 windows server 中安装 iis 服务</p>
+<h2 id="第一步下载ideacms源码包-导入至windows-server-2008中"><a class="anchor" href="#第一步下载ideacms源码包-导入至windows-server-2008中">#</a> 第一步：下载 ideaCMS 源码包 导入至 Windows server 2008 中</h2>
+<p><img data-src="image-20210619191414428.png" alt="image-20210619191414428" /></p>
+<h2 id="第二步解压至c盘目录ideacms文件夹中"><a class="anchor" href="#第二步解压至c盘目录ideacms文件夹中">#</a> 第二步解压至 C 盘目录 ideaCMS 文件夹中</h2>
+<p><img data-src="image-20210619192627036.png" alt="image-20210619192627036" /></p>
+<h2 id="第三步打开服务器管理器"><a class="anchor" href="#第三步打开服务器管理器">#</a> 第三步：打开服务器管理器</h2>
+<p><img data-src="image-20210619192632075.png" alt="image-20210619192632075" /></p>
+<h2 id="第四步建立网站"><a class="anchor" href="#第四步建立网站">#</a> 第四步：建立网站</h2>
+<p>右击网站 --- 点击添加网站 --- 网站名称随意 --- 路径选择之前解压的文件夹</p>
+<p><img data-src="image-20210619192637473.png" alt="image-20210619192637473" /></p>
+<p><img data-src="image-20210619192644524.png" alt="image-20210619192644524" /></p>
 <p>物理路径选择之前解压在 C 盘的 ideacms</p>
-<p><img data-src="IdeaCMS%E7%BD%91%E7%AB%99%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/image-20210619192650308.png" alt="image-20210619192650308"></p>
+<p><img data-src="image-20210619192650308.png" alt="image-20210619192650308" /></p>
 <p>最后点击确定按钮</p>
-<h2 id="第五步配置"><a class="markdownIt-Anchor" href="#第五步配置">#</a> 第五步：配置</h2>
-<hr>
-<p>点击 ideacms 网站 — 找到 ASP 配置 — 找到用父路径将 false==&gt;true</p>
-<p><img data-src="IdeaCMS%E7%BD%91%E7%AB%99%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/image-20210619192654230.png" alt="image-20210619192654230"></p>
-<p><img data-src="IdeaCMS%E7%BD%91%E7%AB%99%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/image-20210619192659606.png" alt="image-20210619192659606"></p>
-<p>找到默认文档配置 — 添加默认文档 — 名称填写 index.asp</p>
-<p><img data-src="IdeaCMS%E7%BD%91%E7%AB%99%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/image-20210619192704869.png" alt="image-20210619192704869"></p>
-<p><img data-src="IdeaCMS%E7%BD%91%E7%AB%99%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/image-20210619192712903.png" alt="image-20210619192712903"></p>
-<p>打开应用程序池 — 找到 ideacms— 右击选择高级设置 — 修改启用 32 位应用程序为 True</p>
-<p><img data-src="IdeaCMS%E7%BD%91%E7%AB%99%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/image-20210619192728052.png" alt="image-20210619192728052"></p>
-<p><img data-src="IdeaCMS%E7%BD%91%E7%AB%99%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/image-20210619192736905.png" alt="image-20210619192736905"></p>
-<p>在 c 盘 \ideacms\inc 文件夹中找到 config.asp 配置文件 — 记事本打开编辑</p>
-<p><img data-src="IdeaCMS%E7%BD%91%E7%AB%99%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/image-20210619192809047.png" alt="image-20210619192809047"></p>
-<p>— 修改 databaseType=“asp”==&gt;databaseType=“sql”— 保存并退出文件</p>
-<p><img data-src="IdeaCMS%E7%BD%91%E7%AB%99%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/image-20210619192817390.png" alt="image-20210619192817390"></p>
-<p><img data-src="IdeaCMS%E7%BD%91%E7%AB%99%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/image-20210619192822505.png" alt="image-20210619192822505"></p>
-<hr>
-<h2 id="第六步连接数据库"><a class="markdownIt-Anchor" href="#第六步连接数据库">#</a> 第六步：连接数据库</h2>
+<h2 id="第五步配置"><a class="anchor" href="#第五步配置">#</a> 第五步：配置</h2>
+<hr />
+<p>点击 ideacms 网站 --- 找到 ASP 配置 --- 找到用父路径将 false==&gt;true</p>
+<p><img data-src="image-20210619192654230.png" alt="image-20210619192654230" /></p>
+<p><img data-src="image-20210619192659606.png" alt="image-20210619192659606" /></p>
+<p>找到默认文档配置 --- 添加默认文档 --- 名称填写 index.asp</p>
+<p><img data-src="image-20210619192704869.png" alt="image-20210619192704869" /></p>
+<p><img data-src="image-20210619192712903.png" alt="image-20210619192712903" /></p>
+<p>打开应用程序池 --- 找到 ideacms--- 右击选择高级设置 --- 修改启用 32 位应用程序为 True</p>
+<p><img data-src="image-20210619192728052.png" alt="image-20210619192728052" /></p>
+<p><img data-src="image-20210619192736905.png" alt="image-20210619192736905" /></p>
+<p>在 c 盘 \ideacms\inc 文件夹中找到 config.asp 配置文件 --- 记事本打开编辑</p>
+<p><img data-src="image-20210619192809047.png" alt="image-20210619192809047" /></p>
+<p>--- 修改 databaseType=“asp”==&gt;databaseType=&quot;sql&quot;--- 保存并退出文件</p>
+<p><img data-src="image-20210619192817390.png" alt="image-20210619192817390" /></p>
+<p><img data-src="image-20210619192822505.png" alt="image-20210619192822505" /></p>
+<hr />
+<h2 id="第六步连接数据库"><a class="anchor" href="#第六步连接数据库">#</a> 第六步：连接数据库</h2>
 <p>打开 SQL server Management Studio</p>
-<p><img data-src="IdeaCMS%E7%BD%91%E7%AB%99%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/image-20210619192835233.png" alt="image-20210619192835233"></p>
-<p>— 右击数据库 — 选择新建数据库</p>
-<p><img data-src="IdeaCMS%E7%BD%91%E7%AB%99%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/image-20210619192842744.png" alt="image-20210619192842744"></p>
-<p>— 数据库名称填写 ideacms</p>
-<p><img data-src="IdeaCMS%E7%BD%91%E7%AB%99%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/image-20210619192853577.png" alt="image-20210619192853577"></p>
-<p>–右击 ideacms— 任务 — 导入数据</p>
-<p><img data-src="IdeaCMS%E7%BD%91%E7%AB%99%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/image-20210619192906854.png" alt="image-20210619192906854"></p>
-<p>— 数据源选择 Mincrosoft Access— 文件名浏览 c:\ideacm\data*.mdb 文件</p>
-<p><img data-src="IdeaCMS%E7%BD%91%E7%AB%99%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/image-20210619192915852.png" alt="image-20210619192915852"></p>
+<p><img data-src="image-20210619192835233.png" alt="image-20210619192835233" /></p>
+<p>--- 右击数据库 --- 选择新建数据库</p>
+<p><img data-src="image-20210619192842744.png" alt="image-20210619192842744" /></p>
+<p>--- 数据库名称填写 ideacms</p>
+<p><img data-src="image-20210619192853577.png" alt="image-20210619192853577" /></p>
+<p>-- 右击 ideacms--- 任务 --- 导入数据</p>
+<p><img data-src="image-20210619192906854.png" alt="image-20210619192906854" /></p>
+<p>--- 数据源选择 Mincrosoft Access--- 文件名浏览 c:\ideacm\data*.mdb 文件</p>
+<p><img data-src="image-20210619192915852.png" alt="image-20210619192915852" /></p>
 <p>然后点击下一步</p>
-<p>— 到表和试图的时候 将所有表都选择</p>
-<p><img data-src="IdeaCMS%E7%BD%91%E7%AB%99%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/image-20210619192925767.png" alt="image-20210619192925767"></p>
-<p>— 默认下一步 — 导入成功</p>
-<p><img data-src="IdeaCMS%E7%BD%91%E7%AB%99%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/image-20210619192954843.png" alt="image-20210619192954843"></p>
-<h2 id="第七步浏览器打开"><a class="markdownIt-Anchor" href="#第七步浏览器打开">#</a> 第七步：浏览器打开</h2>
+<p>--- 到表和试图的时候 将所有表都选择</p>
+<p><img data-src="image-20210619192925767.png" alt="image-20210619192925767" /></p>
+<p>--- 默认下一步 --- 导入成功</p>
+<p><img data-src="image-20210619192954843.png" alt="image-20210619192954843" /></p>
+<h2 id="第七步浏览器打开"><a class="anchor" href="#第七步浏览器打开">#</a> 第七步：浏览器打开</h2>
 <p>在浏览器中输入框中输入虚拟机 ip 即可打开网页</p>
-<p><img data-src="IdeaCMS%E7%BD%91%E7%AB%99%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/image-20210619192958741.png" alt="image-20210619192958741"></p>
+<p><img data-src="image-20210619192958741.png" alt="image-20210619192958741" /></p>
 ]]></content>
       <categories>
         <category>Windows</category>
@@ -145,33 +145,33 @@ branch: master</p>
   <entry>
     <title>Linux中VIM使用教程</title>
     <url>/Linux%E4%B8%ADVIM%E4%BD%BF%E7%94%A8/</url>
-    <content><![CDATA[<h1 id="vim使用"><a class="markdownIt-Anchor" href="#vim使用">#</a> Vim 使用：</h1>
-<p><img data-src="Linux%E4%B8%ADVIM%E4%BD%BF%E7%94%A8/image-20210619203205049.png" alt="image-20210619203205049"></p>
-<h3 id="vim-三种编辑模式"><a class="markdownIt-Anchor" href="#vim-三种编辑模式">#</a> vim 三种编辑模式：</h3>
-<hr>
-<p>Vi/VIM 编辑模式：<br>
-1. 命令模式 (COmmand mode):<br>
-“i” 切换到输入模式，然后输入字符<br>
- “x” 删除当前光标所在处的字符<br>
+    <content><![CDATA[<h1 id="vim使用"><a class="anchor" href="#vim使用">#</a> Vim 使用：</h1>
+<p><img data-src="image-20210619203205049.png" alt="image-20210619203205049" /></p>
+<h3 id="vim-三种编辑模式"><a class="anchor" href="#vim-三种编辑模式">#</a> vim 三种编辑模式：</h3>
+<hr />
+<p>Vi/VIM 编辑模式：<br />
+1. 命令模式 (COmmand mode):<br />
+&quot;i&quot; 切换到输入模式，然后输入字符<br />
+ &quot;x&quot; 删除当前光标所在处的字符<br />
  &quot;:　&quot; 进入命令模式。已在最后一行输入命令</p>
-<p>2. 输入模式 (Insert mode)<br>
+<p>2. 输入模式 (Insert mode)<br />
  3. 底线命令模式 (Last linemode)</p>
-<hr>
+<hr />
 <blockquote>
 <p>vi/vim 文件名.txt     &amp;nbsp // 编辑当前目录该文件名的文件内容，若该目录无此名文件 则会创建一个文件</p>
 </blockquote>
-<p>进入 Vim 编辑器后，按 &quot;i&quot;,“a”,“o&quot;可进入到输入模式，在编辑模式中，左下角会显示–INSERT–字样，如果需要退出的话，按键盘的&quot;ESC&quot;键退出编辑模式 返回到一般模式。按”:&quot; 建 在输入 wq 即可保存并退出编辑。</p>
-<hr>
-<h3 id="vim的保存退出以及强制保存退出"><a class="markdownIt-Anchor" href="#vim的保存退出以及强制保存退出">#</a> vim 的保存退出以及强制保存退出:</h3>
+<p>进入 Vim 编辑器后，按 &quot;i&quot;,&quot;a&quot;,&quot;o&quot; 可进入到输入模式，在编辑模式中，左下角会显示 --INSERT-- 字样，如果需要退出的话，按键盘的 &quot;ESC&quot; 键退出编辑模式 返回到一般模式。按 &quot;:&quot; 建 在输入 wq 即可保存并退出编辑。</p>
+<hr />
+<h3 id="vim的保存退出以及强制保存退出"><a class="anchor" href="#vim的保存退出以及强制保存退出">#</a> vim 的保存退出以及强制保存退出:</h3>
 <blockquote>
-<p>:wq	// 保存并退出<br>
-:q		&amp;nbsp// 退出（不会保存）<br>
-:w		&amp;nbsp// 保存<br>
-:q!	&amp;nbsp // 强制退出<br>
-:w！	&amp;nbsp// 强制保存<br>
+<p>:wq	// 保存并退出<br />
+:q		&amp;nbsp// 退出（不会保存）<br />
+:w		&amp;nbsp// 保存<br />
+:q!	&amp;nbsp // 强制退出<br />
+:w！	&amp;nbsp// 强制保存<br />
 :wq! 	&amp;nbsp // 强制保存并退出</p>
 </blockquote>
-<hr>
+<hr />
 <table>
 <thead>
 <tr>
@@ -205,7 +205,7 @@ branch: master</p>
 <td>移动到这个档案的第一行</td>
 </tr>
 <tr>
-<td>n<Enter></Enter></td>
+<td>n&lt;Enter&gt;</td>
 <td>n 为数字，光标向下移动 n 行</td>
 </tr>
 </tbody>
@@ -309,50 +309,50 @@ branch: master</p>
   <entry>
     <title>Linux用户与用户权限</title>
     <url>/Linux%E7%94%A8%E6%88%B7%E4%B8%8E%E7%94%A8%E6%88%B7%E6%9D%83%E9%99%90/</url>
-    <content><![CDATA[<h2 id="用户命令"><a class="markdownIt-Anchor" href="#用户命令">#</a> ### 用户命令</h2>
-<p>useradd [用户名] // 创建用户，同时创建用户组<br>
- useradd -G [已存在的组] [用户名]  // 创建一个用户并加入一个已存在的组<br>
- useradd [用户名] -s [命令目录]  // 手动指定用户登录后使用的 shell<br>
-useradd -M  // 创建用户时 不创建用户目录<br>
- useradd -N  // 创建用户时 不创建用户组<br>
- usermod -g [用户组] [用户名]  // 修改用户所在的主要组<br>
- usermod -G [用户组] [用户名]  // 修改用户所在的副要组<br>
- usermod -l [新用户名] [旧用户名] // 修改用户名<br>
- usermod -L [用户名] // 锁一个用户 使其不能使用 login 登录 但可以在 root 用户下使用 su 登录<br>
- usermod -e [用户名] // 修改用户登录有效期<br>
- usermod -s [shell] // 修改用户登录后使用的 shell,usermod -s /sbin/nologin 此命令可使账户无法登录<br>
- usermod -u [uid] // 修改用户 uid<br>
-userdel [用户名] // 删除一个用户，但不会删除用户目录<br>
+    <content><![CDATA[<h2 id="用户命令"><a class="anchor" href="#用户命令">#</a> ### 用户命令</h2>
+<p>useradd [用户名] // 创建用户，同时创建用户组<br />
+ useradd -G [已存在的组] [用户名]  // 创建一个用户并加入一个已存在的组<br />
+ useradd [用户名] -s [命令目录]  // 手动指定用户登录后使用的 shell<br />
+useradd -M  // 创建用户时 不创建用户目录<br />
+ useradd -N  // 创建用户时 不创建用户组<br />
+ usermod -g [用户组] [用户名]  // 修改用户所在的主要组<br />
+ usermod -G [用户组] [用户名]  // 修改用户所在的副要组<br />
+ usermod -l [新用户名] [旧用户名] // 修改用户名<br />
+ usermod -L [用户名] // 锁一个用户 使其不能使用 login 登录 但可以在 root 用户下使用 su 登录<br />
+ usermod -e [用户名] // 修改用户登录有效期<br />
+ usermod -s [shell] // 修改用户登录后使用的 shell,usermod -s /sbin/nologin 此命令可使账户无法登录<br />
+ usermod -u [uid] // 修改用户 uid<br />
+userdel [用户名] // 删除一个用户，但不会删除用户目录<br />
  userdel -r [用户名] // 删除用户所有东西，包括用户目录</p>
-<h2 id="用户组命令"><a class="markdownIt-Anchor" href="#用户组命令">#</a> ### 用户组命令</h2>
-<p>groupadd [组名] 创建用户组<br>
- groupadd -g [组编号] [组名] // 创建用户组同时指定编号<br>
- groupmod -n [新组名] [旧组名] // 修改用户组的组名<br>
- groupmod -g [组编号] [组名] // 修改用户组的组编号<br>
+<h2 id="用户组命令"><a class="anchor" href="#用户组命令">#</a> ### 用户组命令</h2>
+<p>groupadd [组名] 创建用户组<br />
+ groupadd -g [组编号] [组名] // 创建用户组同时指定编号<br />
+ groupmod -n [新组名] [旧组名] // 修改用户组的组名<br />
+ groupmod -g [组编号] [组名] // 修改用户组的组编号<br />
  groupdel [组名] // 删除指定用户组</p>
-<h2 id="用户权限命令"><a class="markdownIt-Anchor" href="#用户权限命令">#</a> ### 用户权限命令</h2>
-<p>权限说明：<br>
+<h2 id="用户权限命令"><a class="anchor" href="#用户权限命令">#</a> ### 用户权限命令</h2>
+<p>权限说明：<br />
 ls -al 查看当前目录所有文件 / 文件夹权限</p>
-<p>r = 读；r=4  // 读权限使文件可被读，例 cat、more 命令<br>
- w = 写；w=2 // 写权限使文件 / 文件夹可被改写，例 echo、mv、vi 等命令<br>
+<p>r = 读；r=4  // 读权限使文件可被读，例 cat、more 命令<br />
+ w = 写；w=2 // 写权限使文件 / 文件夹可被改写，例 echo、mv、vi 等命令<br />
  x = 执行；x=1 // 执行权限使文件可被执行或者文件夹进入，例 cd 命令</p>
-<p>权限：rwx rwx rwx<br>
- 分为三组 一组为三个<br>
-第一组：用户权限  第一组英文字母为 u<br>
- 第二组：用户组权限 第二组英文字母为 g<br>
- 第三组：其他用户权限 第三组英文字母为 o<br>
+<p>权限：rwx rwx rwx<br />
+ 分为三组 一组为三个<br />
+第一组：用户权限  第一组英文字母为 u<br />
+ 第二组：用户组权限 第二组英文字母为 g<br />
+ 第三组：其他用户权限 第三组英文字母为 o<br />
  英文字母 a 代表 all 表示三组全选</p>
-<p>Chmod 命令：<br>
-chmod 755 a // 修改 a 文件的权限为 755=rwx r-x r-x<br>
-chmod a+x a // 修改 a 文件中的所有权限 加上执行权限<br>
+<p>Chmod 命令：<br />
+chmod 755 a // 修改 a 文件的权限为 755=rwx r-x r-x<br />
+chmod a+x a // 修改 a 文件中的所有权限 加上执行权限<br />
  chmod -r // 递归修改权限</p>
-<p>chown 命令：<br>
-chown root: root a // 修改 a 文件的用户权限以及用户组权限为 root<br>
-chown root: zhangsan a // 修改 a 文件的用户权限为 root, 用户组权限为 zhangsan<br>
-chown : root a // 只修改 a 文件的用户组为 root<br>
+<p>chown 命令：<br />
+chown root: root a // 修改 a 文件的用户权限以及用户组权限为 root<br />
+chown root: zhangsan a // 修改 a 文件的用户权限为 root, 用户组权限为 zhangsan<br />
+chown : root a // 只修改 a 文件的用户组为 root<br />
 chown -r  // 递归修改</p>
 <p>各个信息代表的含义图解：</p>
-<p><img data-src="Linux%E7%94%A8%E6%88%B7%E4%B8%8E%E7%94%A8%E6%88%B7%E6%9D%83%E9%99%90/image-20210619193139915.png" alt="image-20210619193139915"></p>
+<p><img data-src="image-20210619193139915.png" alt="image-20210619193139915" /></p>
 ]]></content>
       <categories>
         <category>Linux</category>
