@@ -364,39 +364,39 @@ chown -r  // 递归修改</p>
   <entry>
     <title>hexo文章本地图片插件</title>
     <url>/hexo%E6%96%87%E7%AB%A0%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87%E6%8F%92%E4%BB%B6/</url>
-    <content><![CDATA[<h2 id="一-安装插件与修改配置文件"><a class="markdownIt-Anchor" href="#一-安装插件与修改配置文件">#</a> 一、安装插件与修改配置文件</h2>
-<hr>
+    <content><![CDATA[<h2 id="一-安装插件与修改配置文件"><a class="anchor" href="#一-安装插件与修改配置文件">#</a> 一、安装插件与修改配置文件</h2>
+<hr />
 <p>npm install <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tLzd5bTBuL2hleG8tYXNzZXQtaW1hZ2U=">https://github.com/7ym0n/hexo-asset-image</span> --sa   // 修改过的插件，原本的插件有 Buf，这个已经经过修改 安装后就无需修改了。</p>
-<hr>
-<p>打开 hexo 博客根目录的配置文件’_config.yml’ 修改为以下内容</p>
-<hr>
+<hr />
+<p>打开 hexo 博客根目录的配置文件 '_config.yml' 修改为以下内容</p>
+<hr />
 <p>post_asset_folder: false ==&gt; true</p>
-<hr>
-<h2 id="二-创建文章"><a class="markdownIt-Anchor" href="#二-创建文章">#</a> 二、创建文章</h2>
+<hr />
+<h2 id="二-创建文章"><a class="anchor" href="#二-创建文章">#</a> 二、创建文章</h2>
 <p>进入 hexo 博客文章目录中，在当前目录打开终端 /cmd</p>
 <blockquote>
-<p>hexo new “文章名”    // 创建一个文章</p>
+<p>hexo new &quot;文章名&quot;    // 创建一个文章</p>
 </blockquote>
-<p><img data-src="hexo%E6%96%87%E7%AB%A0%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87%E6%8F%92%E4%BB%B6/image-20210619214015237.png" alt="image-20210619214015237"></p>
+<p><img data-src="image-20210619214015237.png" alt="image-20210619214015237" /></p>
 <p>创建完成后，会在文章目录中创建一个与文章名相同的文件夹</p>
-<p><img data-src="hexo%E6%96%87%E7%AB%A0%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87%E6%8F%92%E4%BB%B6/image-20210619214210166.png" alt="image-20210619214210166"></p>
+<p><img data-src="image-20210619214210166.png" alt="image-20210619214210166" /></p>
 <p>这个文件夹就是用来放图片的文件夹</p>
-<h2 id="三-修改typora偏好设置"><a class="markdownIt-Anchor" href="#三-修改typora偏好设置">#</a> 三、修改 Typora 偏好设置</h2>
-<p>打开 Typora，点击左上角文件 — 点击偏好设置</p>
-<p><img data-src="hexo%E6%96%87%E7%AB%A0%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87%E6%8F%92%E4%BB%B6/image-20210619214330935.png" alt="image-20210619214330935"></p>
-<p>在偏好设置中点击–图像</p>
-<p><img data-src="C:%5CUsers%5CBiu%E4%BA%8C%E7%8B%97%E5%AD%90%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20210619214455678.png" alt="image-20210619214455678"></p>
+<h2 id="三-修改typora偏好设置"><a class="anchor" href="#三-修改typora偏好设置">#</a> 三、修改 Typora 偏好设置</h2>
+<p>打开 Typora，点击左上角文件 --- 点击偏好设置</p>
+<p><img data-src="image-20210619214330935.png" alt="image-20210619214330935" /></p>
+<p>在偏好设置中点击 -- 图像</p>
+<p><img data-src="C:%5CUsers%5CBiu%E4%BA%8C%E7%8B%97%E5%AD%90%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20210619214455678.png" alt="image-20210619214455678" /></p>
 <p>将无特殊操作修改为复制到指定路径，然后将【对本地位置的图片应用上述规则】以及【优先使用相对路径勾上】</p>
-<p><img data-src="hexo%E6%96%87%E7%AB%A0%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87%E6%8F%92%E4%BB%B6/image-20210619214700657.png" alt="image-20210619214700657"></p>
-<h2 id="四-插入图片截图"><a class="markdownIt-Anchor" href="#四-插入图片截图">#</a> 四、插入图片 / 截图</h2>
+<p><img data-src="image-20210619214700657.png" alt="image-20210619214700657" /></p>
+<h2 id="四-插入图片截图"><a class="anchor" href="#四-插入图片截图">#</a> 四、插入图片 / 截图</h2>
 <p>将图片放入文件夹中，在文章内容中输入</p>
-<hr>
-<p><img data-src alt="描述文字"></p>
-<p><img data-src="hexo%E6%96%87%E7%AB%A0%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87%E6%8F%92%E4%BB%B6/image-20210619215455695.png" alt="image-20210619215455695"></p>
-<hr>
+<hr />
+<p><img data-src="" alt="描述文字" /></p>
+<p><img data-src="image-20210619215455695.png" alt="image-20210619215455695" /></p>
+<hr />
 <p>第二种放入截图的方式就十分简单了</p>
 <p>使用截图工具 QQ 或者微信的都可以，截图后直接复制到文章内，会自动添加图片到文件夹中</p>
-<p><img data-src="hexo%E6%96%87%E7%AB%A0%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87%E6%8F%92%E4%BB%B6/image-20210619215619487.png" alt="image-20210619215619487"></p>
+<p><img data-src="image-20210619215619487.png" alt="image-20210619215619487" /></p>
 <p>这样就可以正常使用了～</p>
 ]]></content>
       <categories>
