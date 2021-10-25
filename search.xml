@@ -1,26 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Linux用户与用户权限</title>
-    <url>/2021/06/10/Linux%E7%94%A8%E6%88%B7%E4%B8%8E%E7%94%A8%E6%88%B7%E6%9D%83%E9%99%90/</url>
-    <content><![CDATA[<h2 id="用户命令"><a href="#用户命令" class="headerlink" title="###用户命令"></a>###用户命令</h2><p>useradd [用户名] //创建用户，同时创建用户组<br>useradd -G [已存在的组] [用户名]  //创建一个用户并加入一个已存在的组<br>useradd [用户名] -s [命令目录]  //手动指定用户登录后使用的shell<br>useradd -M  //创建用户时 不创建用户目录<br>useradd -N  //创建用户时 不创建用户组<br>usermod -g [用户组] [用户名]  //修改用户所在的主要组<br>usermod -G [用户组] [用户名]  //修改用户所在的副要组<br>usermod -l [新用户名] [旧用户名] //修改用户名<br>usermod -L [用户名] //锁一个用户 使其不能使用login登录 但可以在root用户下使用su登录<br>usermod -e [用户名] //修改用户登录有效期<br>usermod -s [shell] //修改用户登录后使用的shell,usermod -s /sbin/nologin 此命令可使账户无法登录<br>usermod -u [uid] //修改用户uid<br>userdel [用户名] //删除一个用户，但不会删除用户目录<br>userdel -r [用户名] //删除用户所有东西，包括用户目录</p>
-<h2 id="用户组命令"><a href="#用户组命令" class="headerlink" title="###用户组命令"></a>###用户组命令</h2><p>groupadd [组名] 创建用户组<br>groupadd -g [组编号] [组名] //创建用户组同时指定编号<br>groupmod -n [新组名] [旧组名] //修改用户组的组名<br>groupmod -g [组编号] [组名] //修改用户组的组编号<br>groupdel [组名] //删除指定用户组</p>
-<h2 id="用户权限命令"><a href="#用户权限命令" class="headerlink" title="###用户权限命令"></a>###用户权限命令</h2><p>权限说明：<br>ls -al 查看当前目录所有文件/文件夹权限</p>
-<p>r=读;  r=4  //读权限使文件可被读，例cat、more命令<br>w=写; w=2 //写权限使文件/文件夹可被改写,例echo、mv、vi等命令<br>x=执行;x=1 //执行权限使文件可被执行或者文件夹进入，例cd命令</p>
-<p>权限：rwx rwx rwx<br>分为三组 一组为三个<br>第一组：用户权限  第一组英文字母为u<br>第二组：用户组权限 第二组英文字母为g<br>第三组：其他用户权限 第三组英文字母为o<br>英文字母a代表all 表示三组全选</p>
-<p>Chmod命令：<br>chmod 755 a //修改a文件的权限为755=rwx r-x r-x<br>chmod a+x a //修改a文件中的所有权限 加上执行权限<br>chmod -r //递归修改权限</p>
-<p>chown命令：<br>chown root: root a //修改a文件的用户权限以及用户组权限为root<br>chown root: zhangsan a //修改a文件的用户权限为root,用户组权限为zhangsan<br>chown : root a //只修改a文件的用户组为root<br>chown -r  //递归修改</p>
-<p>各个信息代表的含义图解：</p>
-<p><img src="/2021/06/10/Linux%E7%94%A8%E6%88%B7%E4%B8%8E%E7%94%A8%E6%88%B7%E6%9D%83%E9%99%90/image-20210619193139915.png" alt="image-20210619193139915"></p>
-]]></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
-      <tags>
-        <tag>基础</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hexo博客搭建</title>
     <url>/2021/06/10/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E4%B8%8E%E4%B8%8A%E4%BC%A0%E5%88%B0github%E6%95%99%E7%A8%8B/</url>
     <content><![CDATA[<h1 id="Hexo博客搭建"><a href="#Hexo博客搭建" class="headerlink" title="#Hexo博客搭建"></a>#Hexo博客搭建</h1><h2 id="第一步：安装choco工具"><a href="#第一步：安装choco工具" class="headerlink" title="##第一步：安装choco工具"></a>##第一步：安装choco工具</h2><p>进入choco官网：<a href="https://chocolatey.org/">https://chocolatey.org/</a><br>以管理员身份运行终端<br>复制安装命令：<br>Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]: : SecurityProtocol = [System.Net.ServicePointManager]: : SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString(‘<a href="https://chocolatey.org/install.ps1&#39;">https://chocolatey.org/install.ps1&#39;</a>))</p>
@@ -74,6 +54,80 @@
 <h2 id="完成！"><a href="#完成！" class="headerlink" title="##完成！"></a>##完成！</h2>]]></content>
       <categories>
         <category>Hexo博客</category>
+      </categories>
+      <tags>
+        <tag>基础</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Windows server 2008虚拟机中IdeaCMS网站安装教程</title>
+    <url>/2021/06/10/IdeaCMS%E7%BD%91%E7%AB%99%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</url>
+    <content><![CDATA[<h1 id="IdeaCMS网站安装教程："><a href="#IdeaCMS网站安装教程：" class="headerlink" title="IdeaCMS网站安装教程："></a>IdeaCMS网站安装教程：</h1><p>&lt;!-以下步骤皆为在虚拟机中操作–！&gt; 此教程为已在windows server中安装iis服务</p>
+<h2 id="第一步：下载ideaCMS源码包-导入至Windows-server-2008中"><a href="#第一步：下载ideaCMS源码包-导入至Windows-server-2008中" class="headerlink" title="第一步：下载ideaCMS源码包 导入至Windows server 2008中"></a>第一步：下载ideaCMS源码包 导入至Windows server 2008中</h2><p><img src="/2021/06/10/IdeaCMS%E7%BD%91%E7%AB%99%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/image-20210619191414428.png" alt="image-20210619191414428"></p>
+<h2 id="第二步解压至C盘目录ideaCMS文件夹中"><a href="#第二步解压至C盘目录ideaCMS文件夹中" class="headerlink" title="第二步解压至C盘目录ideaCMS文件夹中"></a>第二步解压至C盘目录ideaCMS文件夹中</h2><p><img src="/2021/06/10/IdeaCMS%E7%BD%91%E7%AB%99%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/image-20210619192627036.png" alt="image-20210619192627036"></p>
+<h2 id="第三步：打开服务器管理器"><a href="#第三步：打开服务器管理器" class="headerlink" title="第三步：打开服务器管理器"></a>第三步：打开服务器管理器</h2><p><img src="/2021/06/10/IdeaCMS%E7%BD%91%E7%AB%99%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/image-20210619192632075.png" alt="image-20210619192632075"></p>
+<h2 id="第四步：建立网站"><a href="#第四步：建立网站" class="headerlink" title="第四步：建立网站"></a>第四步：建立网站</h2><p>右击网站—点击添加网站—网站名称随意—路径选择之前解压的文件夹</p>
+<p><img src="/2021/06/10/IdeaCMS%E7%BD%91%E7%AB%99%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/image-20210619192637473.png" alt="image-20210619192637473"></p>
+<p><img src="/2021/06/10/IdeaCMS%E7%BD%91%E7%AB%99%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/image-20210619192644524.png" alt="image-20210619192644524"></p>
+<p>物理路径选择之前解压在C盘的ideacms</p>
+<p><img src="/2021/06/10/IdeaCMS%E7%BD%91%E7%AB%99%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/image-20210619192650308.png" alt="image-20210619192650308"></p>
+<p>最后点击确定按钮</p>
+<h2 id="第五步：配置"><a href="#第五步：配置" class="headerlink" title="第五步：配置"></a>第五步：配置</h2><hr>
+<p>点击ideacms网站—找到ASP配置—找到用父路径将false==&gt;true</p>
+<p><img src="/2021/06/10/IdeaCMS%E7%BD%91%E7%AB%99%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/image-20210619192654230.png" alt="image-20210619192654230"></p>
+<p><img src="/2021/06/10/IdeaCMS%E7%BD%91%E7%AB%99%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/image-20210619192659606.png" alt="image-20210619192659606"></p>
+<p>找到默认文档配置—添加默认文档—名称填写index.asp </p>
+<p><img src="/2021/06/10/IdeaCMS%E7%BD%91%E7%AB%99%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/image-20210619192704869.png" alt="image-20210619192704869"></p>
+<p><img src="/2021/06/10/IdeaCMS%E7%BD%91%E7%AB%99%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/image-20210619192712903.png" alt="image-20210619192712903"></p>
+<p>打开应用程序池—找到ideacms—右击选择高级设置—修改启用32位应用程序为True</p>
+<p><img src="/2021/06/10/IdeaCMS%E7%BD%91%E7%AB%99%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/image-20210619192728052.png" alt="image-20210619192728052"></p>
+<p><img src="/2021/06/10/IdeaCMS%E7%BD%91%E7%AB%99%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/image-20210619192736905.png" alt="image-20210619192736905"></p>
+<p>在c盘\ideacms\inc文件夹中找到config.asp配置文件—记事本打开编辑</p>
+<p><img src="/2021/06/10/IdeaCMS%E7%BD%91%E7%AB%99%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/image-20210619192809047.png" alt="image-20210619192809047"></p>
+<p>—修改databaseType=“asp”==&gt;databaseType=”sql”—保存并退出文件</p>
+<p><img src="/2021/06/10/IdeaCMS%E7%BD%91%E7%AB%99%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/image-20210619192817390.png" alt="image-20210619192817390"></p>
+<p><img src="/2021/06/10/IdeaCMS%E7%BD%91%E7%AB%99%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/image-20210619192822505.png" alt="image-20210619192822505"></p>
+<hr>
+<h2 id="第六步：连接数据库"><a href="#第六步：连接数据库" class="headerlink" title="第六步：连接数据库"></a>第六步：连接数据库</h2><p>打开SQL server Management Studio</p>
+<p><img src="/2021/06/10/IdeaCMS%E7%BD%91%E7%AB%99%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/image-20210619192835233.png" alt="image-20210619192835233"></p>
+<p> — 右击数据库—选择新建数据库</p>
+<p><img src="/2021/06/10/IdeaCMS%E7%BD%91%E7%AB%99%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/image-20210619192842744.png" alt="image-20210619192842744"></p>
+<p>—数据库名称填写ideacms</p>
+<p><img src="/2021/06/10/IdeaCMS%E7%BD%91%E7%AB%99%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/image-20210619192853577.png" alt="image-20210619192853577"></p>
+<p>–右击ideacms—任务—导入数据</p>
+<p><img src="/2021/06/10/IdeaCMS%E7%BD%91%E7%AB%99%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/image-20210619192906854.png" alt="image-20210619192906854"></p>
+<p>—数据源选择Mincrosoft Access—文件名浏览c:\ideacm\data*.mdb 文件</p>
+<p><img src="/2021/06/10/IdeaCMS%E7%BD%91%E7%AB%99%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/image-20210619192915852.png" alt="image-20210619192915852"></p>
+<p>然后点击下一步</p>
+<p>—到表和试图的时候 将所有表都选择</p>
+<p><img src="/2021/06/10/IdeaCMS%E7%BD%91%E7%AB%99%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/image-20210619192925767.png" alt="image-20210619192925767"></p>
+<p>—默认下一步—导入成功</p>
+<p><img src="/2021/06/10/IdeaCMS%E7%BD%91%E7%AB%99%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/image-20210619192954843.png" alt="image-20210619192954843"></p>
+<h2 id="第七步：浏览器打开"><a href="#第七步：浏览器打开" class="headerlink" title="第七步：浏览器打开"></a>第七步：浏览器打开</h2><p>在浏览器中输入框中输入虚拟机ip即可打开网页</p>
+<p><img src="/2021/06/10/IdeaCMS%E7%BD%91%E7%AB%99%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/image-20210619192958741.png" alt="image-20210619192958741"></p>
+]]></content>
+      <categories>
+        <category>Windows</category>
+      </categories>
+      <tags>
+        <tag>基础</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Linux用户与用户权限</title>
+    <url>/2021/06/10/Linux%E7%94%A8%E6%88%B7%E4%B8%8E%E7%94%A8%E6%88%B7%E6%9D%83%E9%99%90/</url>
+    <content><![CDATA[<h2 id="用户命令"><a href="#用户命令" class="headerlink" title="###用户命令"></a>###用户命令</h2><p>useradd [用户名] //创建用户，同时创建用户组<br>useradd -G [已存在的组] [用户名]  //创建一个用户并加入一个已存在的组<br>useradd [用户名] -s [命令目录]  //手动指定用户登录后使用的shell<br>useradd -M  //创建用户时 不创建用户目录<br>useradd -N  //创建用户时 不创建用户组<br>usermod -g [用户组] [用户名]  //修改用户所在的主要组<br>usermod -G [用户组] [用户名]  //修改用户所在的副要组<br>usermod -l [新用户名] [旧用户名] //修改用户名<br>usermod -L [用户名] //锁一个用户 使其不能使用login登录 但可以在root用户下使用su登录<br>usermod -e [用户名] //修改用户登录有效期<br>usermod -s [shell] //修改用户登录后使用的shell,usermod -s /sbin/nologin 此命令可使账户无法登录<br>usermod -u [uid] //修改用户uid<br>userdel [用户名] //删除一个用户，但不会删除用户目录<br>userdel -r [用户名] //删除用户所有东西，包括用户目录</p>
+<h2 id="用户组命令"><a href="#用户组命令" class="headerlink" title="###用户组命令"></a>###用户组命令</h2><p>groupadd [组名] 创建用户组<br>groupadd -g [组编号] [组名] //创建用户组同时指定编号<br>groupmod -n [新组名] [旧组名] //修改用户组的组名<br>groupmod -g [组编号] [组名] //修改用户组的组编号<br>groupdel [组名] //删除指定用户组</p>
+<h2 id="用户权限命令"><a href="#用户权限命令" class="headerlink" title="###用户权限命令"></a>###用户权限命令</h2><p>权限说明：<br>ls -al 查看当前目录所有文件/文件夹权限</p>
+<p>r=读;  r=4  //读权限使文件可被读，例cat、more命令<br>w=写; w=2 //写权限使文件/文件夹可被改写,例echo、mv、vi等命令<br>x=执行;x=1 //执行权限使文件可被执行或者文件夹进入，例cd命令</p>
+<p>权限：rwx rwx rwx<br>分为三组 一组为三个<br>第一组：用户权限  第一组英文字母为u<br>第二组：用户组权限 第二组英文字母为g<br>第三组：其他用户权限 第三组英文字母为o<br>英文字母a代表all 表示三组全选</p>
+<p>Chmod命令：<br>chmod 755 a //修改a文件的权限为755=rwx r-x r-x<br>chmod a+x a //修改a文件中的所有权限 加上执行权限<br>chmod -r //递归修改权限</p>
+<p>chown命令：<br>chown root: root a //修改a文件的用户权限以及用户组权限为root<br>chown root: zhangsan a //修改a文件的用户权限为root,用户组权限为zhangsan<br>chown : root a //只修改a文件的用户组为root<br>chown -r  //递归修改</p>
+<p>各个信息代表的含义图解：</p>
+<p><img src="/2021/06/10/Linux%E7%94%A8%E6%88%B7%E4%B8%8E%E7%94%A8%E6%88%B7%E6%9D%83%E9%99%90/image-20210619193139915.png" alt="image-20210619193139915"></p>
+]]></content>
+      <categories>
+        <category>Linux</category>
       </categories>
       <tags>
         <tag>基础</tag>
@@ -260,161 +314,6 @@
 ]]></content>
       <categories>
         <category>Hexo博客</category>
-      </categories>
-      <tags>
-        <tag>基础</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Windows server 2008虚拟机中IdeaCMS网站安装教程</title>
-    <url>/2021/06/10/IdeaCMS%E7%BD%91%E7%AB%99%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</url>
-    <content><![CDATA[<h1 id="IdeaCMS网站安装教程："><a href="#IdeaCMS网站安装教程：" class="headerlink" title="IdeaCMS网站安装教程："></a>IdeaCMS网站安装教程：</h1><p>&lt;!-以下步骤皆为在虚拟机中操作–！&gt; 此教程为已在windows server中安装iis服务</p>
-<h2 id="第一步：下载ideaCMS源码包-导入至Windows-server-2008中"><a href="#第一步：下载ideaCMS源码包-导入至Windows-server-2008中" class="headerlink" title="第一步：下载ideaCMS源码包 导入至Windows server 2008中"></a>第一步：下载ideaCMS源码包 导入至Windows server 2008中</h2><p><img src="/2021/06/10/IdeaCMS%E7%BD%91%E7%AB%99%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/image-20210619191414428.png" alt="image-20210619191414428"></p>
-<h2 id="第二步解压至C盘目录ideaCMS文件夹中"><a href="#第二步解压至C盘目录ideaCMS文件夹中" class="headerlink" title="第二步解压至C盘目录ideaCMS文件夹中"></a>第二步解压至C盘目录ideaCMS文件夹中</h2><p><img src="/2021/06/10/IdeaCMS%E7%BD%91%E7%AB%99%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/image-20210619192627036.png" alt="image-20210619192627036"></p>
-<h2 id="第三步：打开服务器管理器"><a href="#第三步：打开服务器管理器" class="headerlink" title="第三步：打开服务器管理器"></a>第三步：打开服务器管理器</h2><p><img src="/2021/06/10/IdeaCMS%E7%BD%91%E7%AB%99%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/image-20210619192632075.png" alt="image-20210619192632075"></p>
-<h2 id="第四步：建立网站"><a href="#第四步：建立网站" class="headerlink" title="第四步：建立网站"></a>第四步：建立网站</h2><p>右击网站—点击添加网站—网站名称随意—路径选择之前解压的文件夹</p>
-<p><img src="/2021/06/10/IdeaCMS%E7%BD%91%E7%AB%99%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/image-20210619192637473.png" alt="image-20210619192637473"></p>
-<p><img src="/2021/06/10/IdeaCMS%E7%BD%91%E7%AB%99%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/image-20210619192644524.png" alt="image-20210619192644524"></p>
-<p>物理路径选择之前解压在C盘的ideacms</p>
-<p><img src="/2021/06/10/IdeaCMS%E7%BD%91%E7%AB%99%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/image-20210619192650308.png" alt="image-20210619192650308"></p>
-<p>最后点击确定按钮</p>
-<h2 id="第五步：配置"><a href="#第五步：配置" class="headerlink" title="第五步：配置"></a>第五步：配置</h2><hr>
-<p>点击ideacms网站—找到ASP配置—找到用父路径将false==&gt;true</p>
-<p><img src="/2021/06/10/IdeaCMS%E7%BD%91%E7%AB%99%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/image-20210619192654230.png" alt="image-20210619192654230"></p>
-<p><img src="/2021/06/10/IdeaCMS%E7%BD%91%E7%AB%99%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/image-20210619192659606.png" alt="image-20210619192659606"></p>
-<p>找到默认文档配置—添加默认文档—名称填写index.asp </p>
-<p><img src="/2021/06/10/IdeaCMS%E7%BD%91%E7%AB%99%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/image-20210619192704869.png" alt="image-20210619192704869"></p>
-<p><img src="/2021/06/10/IdeaCMS%E7%BD%91%E7%AB%99%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/image-20210619192712903.png" alt="image-20210619192712903"></p>
-<p>打开应用程序池—找到ideacms—右击选择高级设置—修改启用32位应用程序为True</p>
-<p><img src="/2021/06/10/IdeaCMS%E7%BD%91%E7%AB%99%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/image-20210619192728052.png" alt="image-20210619192728052"></p>
-<p><img src="/2021/06/10/IdeaCMS%E7%BD%91%E7%AB%99%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/image-20210619192736905.png" alt="image-20210619192736905"></p>
-<p>在c盘\ideacms\inc文件夹中找到config.asp配置文件—记事本打开编辑</p>
-<p><img src="/2021/06/10/IdeaCMS%E7%BD%91%E7%AB%99%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/image-20210619192809047.png" alt="image-20210619192809047"></p>
-<p>—修改databaseType=“asp”==&gt;databaseType=”sql”—保存并退出文件</p>
-<p><img src="/2021/06/10/IdeaCMS%E7%BD%91%E7%AB%99%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/image-20210619192817390.png" alt="image-20210619192817390"></p>
-<p><img src="/2021/06/10/IdeaCMS%E7%BD%91%E7%AB%99%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/image-20210619192822505.png" alt="image-20210619192822505"></p>
-<hr>
-<h2 id="第六步：连接数据库"><a href="#第六步：连接数据库" class="headerlink" title="第六步：连接数据库"></a>第六步：连接数据库</h2><p>打开SQL server Management Studio</p>
-<p><img src="/2021/06/10/IdeaCMS%E7%BD%91%E7%AB%99%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/image-20210619192835233.png" alt="image-20210619192835233"></p>
-<p> — 右击数据库—选择新建数据库</p>
-<p><img src="/2021/06/10/IdeaCMS%E7%BD%91%E7%AB%99%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/image-20210619192842744.png" alt="image-20210619192842744"></p>
-<p>—数据库名称填写ideacms</p>
-<p><img src="/2021/06/10/IdeaCMS%E7%BD%91%E7%AB%99%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/image-20210619192853577.png" alt="image-20210619192853577"></p>
-<p>–右击ideacms—任务—导入数据</p>
-<p><img src="/2021/06/10/IdeaCMS%E7%BD%91%E7%AB%99%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/image-20210619192906854.png" alt="image-20210619192906854"></p>
-<p>—数据源选择Mincrosoft Access—文件名浏览c:\ideacm\data*.mdb 文件</p>
-<p><img src="/2021/06/10/IdeaCMS%E7%BD%91%E7%AB%99%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/image-20210619192915852.png" alt="image-20210619192915852"></p>
-<p>然后点击下一步</p>
-<p>—到表和试图的时候 将所有表都选择</p>
-<p><img src="/2021/06/10/IdeaCMS%E7%BD%91%E7%AB%99%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/image-20210619192925767.png" alt="image-20210619192925767"></p>
-<p>—默认下一步—导入成功</p>
-<p><img src="/2021/06/10/IdeaCMS%E7%BD%91%E7%AB%99%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/image-20210619192954843.png" alt="image-20210619192954843"></p>
-<h2 id="第七步：浏览器打开"><a href="#第七步：浏览器打开" class="headerlink" title="第七步：浏览器打开"></a>第七步：浏览器打开</h2><p>在浏览器中输入框中输入虚拟机ip即可打开网页</p>
-<p><img src="/2021/06/10/IdeaCMS%E7%BD%91%E7%AB%99%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/image-20210619192958741.png" alt="image-20210619192958741"></p>
-]]></content>
-      <categories>
-        <category>Windows</category>
-      </categories>
-      <tags>
-        <tag>基础</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Linux命令</title>
-    <url>/2021/06/10/linux%E5%91%BD%E4%BB%A4/</url>
-    <content><![CDATA[<h2 id="文件操作"><a href="#文件操作" class="headerlink" title="##文件操作"></a>##文件操作</h2><h2 id="增："><a href="#增：" class="headerlink" title="###增："></a>###增：</h2><pre><code>touch [文件名.后缀]  //新建文件
-vi: wq //编辑保存并退出
-echo &gt; [名称].txt //写入内容至一个文本文件 若目录无改名字的文本文件 则会自动创建
-mkdir -p //新建一个文件夹 -p：递归创建
-</code></pre>
-<h2 id="删"><a href="#删" class="headerlink" title="###删:"></a>###删:</h2><pre><code>rmdir //只能删除空文件夹
-rm //删除一个文件/文件夹
--r //将目录及以下文件全都删除
--f //无需确认 直接删除
--i //删除是会提示 默认为提示
-rm -rf * //删除改目录下所有文件 谨慎使用
-fg %[工作号] //结束某个在后台的任务
-</code></pre>
-<h2 id="查："><a href="#查：" class="headerlink" title="###查："></a>###查：</h2><pre><code>ls //查看当前目录
--a //查看当前目录所有文件 包括隐藏文件
--l //查看当前目录文件权限
--t //将文件依建立时间之先后次序列出
-cat //查看文件内容
-tac //倒序查看文件内容
-head -n //显示头几行文本内容 默认为10行
-tail -n //显示末尾几行文本内容 默认为10行
-tail -f //实时显示新增文本内容
-grep //查找相关字符串内容
-find //索引搜索
-ps -aux //查询所有进程
-whereis * //查看*在什么路径
-jobs [选项] //查看后台
-more [选项] [文件名] //显示文件第一页
-whoami //查看用户
-w=who //查看所有登录的用户
-</code></pre>
-<h2 id="改："><a href="#改：" class="headerlink" title="###改："></a>###改：</h2><pre><code>cp // 复制一个文件/文件夹
--r //若给出的源文件是个目录文件，将复制改目录下所有的子目录与文件
--p //复制文件，并会会把修改时间和访问权限也复制到新文件中
--f //覆盖已存在的目标文件不会提示
-cat /etc/passwd &gt; ./passwd 修改文件内容至passwd
-mv [文件名] [目标目录] //移动文件至目标目录
-mv [文件名] [新文件名] //修改文件名
-touch -t [时间] [文件名] 修改文件创建世界/最后修改时间
-</code></pre>
-<h2 id="查看系统信息"><a href="#查看系统信息" class="headerlink" title="##查看系统信息"></a>##查看系统信息</h2><pre><code>uname 命令：
-uname --help //查看帮助
-uname -n //显示计算机名
-uname -s //显示系统名称
-uname -a //显示系统信息
-uname -m //显示计算机类型
-uanme -v //显示系统版本与时间
-uname -r //显示系统发行编号
-</code></pre>
-<h2 id="Linux按键命令"><a href="#Linux按键命令" class="headerlink" title="##Linux按键命令"></a>##Linux按键命令</h2><pre><code>Tab //自动补全命令
-Ctrl+l //清屏
-Ctrl+u //清空至首行
-Ctrl+c //取消本次命令执行
-Ctrl+z //将程序放入后台
-</code></pre>
-<h2 id="Linux压缩命令"><a href="#Linux压缩命令" class="headerlink" title="##Linux压缩命令"></a>##Linux压缩命令</h2><pre><code>tar [选项] 源文件或目录.tar.gz // 打包文件
-tar 打包与压缩:
-tar cvf a.tar ./ //打包本地文件名称为a.tar
-tar xvf a.tar //解压a.tar文件
-
-tar zcvf b.tar.gz ./* //打包所有文件为b.tar.gz
-tar zxvf b.tar.gz  //解压文件 b.tar.gz
-</code></pre>
-<h2 id="PIng命令"><a href="#PIng命令" class="headerlink" title="##PIng命令"></a>##PIng命令</h2><pre><code>ping [目标主机/域名] //对目标主机发送数据包，网络测试
-traceroute baidu.com //自由追踪
-</code></pre>
-<h2 id="Linux命令补充："><a href="#Linux命令补充：" class="headerlink" title="##Linux命令补充："></a>##Linux命令补充：</h2><pre><code>关机指令： 
-poweroff //立刻关机
-halt //立刻关机
-init命令：  
---run level 0: 关机
---run level 3: 纯文本模式
---run level 6: 重新启动
-reboot //立即重启
-Shutdown [选项] 时间
-选项： 
--c: 取消前一个关机命令
--h: 关机
--r：重启
-用户登录命令; 
-login //登录
-基本语法：login [name][-p][-h主机名称]
-用户退出命令： 
-exit //退出控制台
-logout //注销用户
-apt-get:  
-sudo apt-get update 更新软件列表
-sudo apt-get upgrade 更新软件
-sudo apt-get install banner 安装一个文字图形输出
-</code></pre>
-]]></content>
-      <categories>
-        <category>Linux</category>
       </categories>
       <tags>
         <tag>基础</tag>
@@ -665,6 +564,107 @@ Username: 《input type=&quot;text&quot; name=&quot;user&quot;》
       </categories>
       <tags>
         <tag>HTML</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Linux命令</title>
+    <url>/2021/06/10/linux%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<h2 id="文件操作"><a href="#文件操作" class="headerlink" title="##文件操作"></a>##文件操作</h2><h2 id="增："><a href="#增：" class="headerlink" title="###增："></a>###增：</h2><pre><code>touch [文件名.后缀]  //新建文件
+vi: wq //编辑保存并退出
+echo &gt; [名称].txt //写入内容至一个文本文件 若目录无改名字的文本文件 则会自动创建
+mkdir -p //新建一个文件夹 -p：递归创建
+</code></pre>
+<h2 id="删"><a href="#删" class="headerlink" title="###删:"></a>###删:</h2><pre><code>rmdir //只能删除空文件夹
+rm //删除一个文件/文件夹
+-r //将目录及以下文件全都删除
+-f //无需确认 直接删除
+-i //删除是会提示 默认为提示
+rm -rf * //删除改目录下所有文件 谨慎使用
+fg %[工作号] //结束某个在后台的任务
+</code></pre>
+<h2 id="查："><a href="#查：" class="headerlink" title="###查："></a>###查：</h2><pre><code>ls //查看当前目录
+-a //查看当前目录所有文件 包括隐藏文件
+-l //查看当前目录文件权限
+-t //将文件依建立时间之先后次序列出
+cat //查看文件内容
+tac //倒序查看文件内容
+head -n //显示头几行文本内容 默认为10行
+tail -n //显示末尾几行文本内容 默认为10行
+tail -f //实时显示新增文本内容
+grep //查找相关字符串内容
+find //索引搜索
+ps -aux //查询所有进程
+whereis * //查看*在什么路径
+jobs [选项] //查看后台
+more [选项] [文件名] //显示文件第一页
+whoami //查看用户
+w=who //查看所有登录的用户
+</code></pre>
+<h2 id="改："><a href="#改：" class="headerlink" title="###改："></a>###改：</h2><pre><code>cp // 复制一个文件/文件夹
+-r //若给出的源文件是个目录文件，将复制改目录下所有的子目录与文件
+-p //复制文件，并会会把修改时间和访问权限也复制到新文件中
+-f //覆盖已存在的目标文件不会提示
+cat /etc/passwd &gt; ./passwd 修改文件内容至passwd
+mv [文件名] [目标目录] //移动文件至目标目录
+mv [文件名] [新文件名] //修改文件名
+touch -t [时间] [文件名] 修改文件创建世界/最后修改时间
+</code></pre>
+<h2 id="查看系统信息"><a href="#查看系统信息" class="headerlink" title="##查看系统信息"></a>##查看系统信息</h2><pre><code>uname 命令：
+uname --help //查看帮助
+uname -n //显示计算机名
+uname -s //显示系统名称
+uname -a //显示系统信息
+uname -m //显示计算机类型
+uanme -v //显示系统版本与时间
+uname -r //显示系统发行编号
+</code></pre>
+<h2 id="Linux按键命令"><a href="#Linux按键命令" class="headerlink" title="##Linux按键命令"></a>##Linux按键命令</h2><pre><code>Tab //自动补全命令
+Ctrl+l //清屏
+Ctrl+u //清空至首行
+Ctrl+c //取消本次命令执行
+Ctrl+z //将程序放入后台
+</code></pre>
+<h2 id="Linux压缩命令"><a href="#Linux压缩命令" class="headerlink" title="##Linux压缩命令"></a>##Linux压缩命令</h2><pre><code>tar [选项] 源文件或目录.tar.gz // 打包文件
+tar 打包与压缩:
+tar cvf a.tar ./ //打包本地文件名称为a.tar
+tar xvf a.tar //解压a.tar文件
+
+tar zcvf b.tar.gz ./* //打包所有文件为b.tar.gz
+tar zxvf b.tar.gz  //解压文件 b.tar.gz
+</code></pre>
+<h2 id="PIng命令"><a href="#PIng命令" class="headerlink" title="##PIng命令"></a>##PIng命令</h2><pre><code>ping [目标主机/域名] //对目标主机发送数据包，网络测试
+traceroute baidu.com //自由追踪
+</code></pre>
+<h2 id="Linux命令补充："><a href="#Linux命令补充：" class="headerlink" title="##Linux命令补充："></a>##Linux命令补充：</h2><pre><code>关机指令： 
+poweroff //立刻关机
+halt //立刻关机
+init命令：  
+--run level 0: 关机
+--run level 3: 纯文本模式
+--run level 6: 重新启动
+reboot //立即重启
+Shutdown [选项] 时间
+选项： 
+-c: 取消前一个关机命令
+-h: 关机
+-r：重启
+用户登录命令; 
+login //登录
+基本语法：login [name][-p][-h主机名称]
+用户退出命令： 
+exit //退出控制台
+logout //注销用户
+apt-get:  
+sudo apt-get update 更新软件列表
+sudo apt-get upgrade 更新软件
+sudo apt-get install banner 安装一个文字图形输出
+</code></pre>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>基础</tag>
       </tags>
   </entry>
   <entry>
